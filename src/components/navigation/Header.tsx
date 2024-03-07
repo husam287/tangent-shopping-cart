@@ -6,6 +6,7 @@ import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import Colors from "@/constants/Colors";
 import Text from "@/components/general/Text";
 import NotificationBell from "./NotificationBell";
+import { horizontalScale, moderateScale } from "@/constants/Metrics";
 
 const styles = StyleSheet.create({
   headerStyle: {
@@ -13,18 +14,18 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.light,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 15,
+    paddingHorizontal: horizontalScale(15),
     paddingTop: getStatusBarHeight(),
   },
   headerTitle: {
     color: Colors.primary,
-    fontSize: 18,
+    fontSize: moderateScale(18),
     ...GLOBAL_STYLES.font500,
   },
   hiddenStyle: { opacity: 0 },
   spacing: {
-    marginStart: -15,
-    padding: 15,
+    marginStart: -horizontalScale(15),
+    padding: moderateScale(15),
   },
 });
 
@@ -39,7 +40,7 @@ export default function NavigationHeader({
   const BackButtonMarkup = (
     <SimpleLineIcons
       name={I18nManager.isRTL ? "arrow-right" : "arrow-left"}
-      size={18}
+      size={moderateScale(18)}
       color={Colors.dark}
     />
   );

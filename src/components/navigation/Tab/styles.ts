@@ -1,17 +1,18 @@
 import { StyleSheet } from "react-native";
 import COLORS from "@/constants/Colors";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
+import { moderateScale, verticalScale } from "@/constants/Metrics";
 
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 10,
-    paddingVertical: 6,
+    marginTop: verticalScale(10),
+    paddingVertical: verticalScale(6),
   },
   text: {
     color: COLORS.dark,
-    fontSize: 10,
+    fontSize: moderateScale(10),
     ...GLOBAL_STYLES.font700,
   },
 });
