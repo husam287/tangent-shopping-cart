@@ -3,14 +3,17 @@
 /* eslint-disable no-param-reassign */
 
 const infintyPaginationMergeHandler = (currentCache: any, newItems: any) => {
+  // first page
   if (!newItems?.previous) {
     return {
       ...newItems,
+      next: newItems?.skip < newItems?.total,
     };
   }
+
   if (currentCache?.next) {
-    currentCache.next = newItems?.next;
-    currentCache.results.push(...newItems.results);
+    currentCache.next = newItems?.skip < newItems?.total;
+    currentCache.products.push(...newItems.products);
   }
 };
 

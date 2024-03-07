@@ -1,34 +1,43 @@
 import infintyPaginationMergeHandler from "@/utils/infintyPaginationMergeHandler";
 import api from "@/apis";
 import getSerializedQueryArgs from "@/utils/getSerializedQueryArgs";
-import { GetAllProductParams, Product } from "../@types/product";
+import { GetProductParams, Product } from "../@types/product";
 import { PaginatedResponse } from "../@types/general";
+import LIMIT from "../limit";
 
 export const ProductApi = api.injectEndpoints({
   endpoints: (build) => ({
-    getProducts: build.query<PaginatedResponse<Product>, GetAllProductParams>({
-      query: ({ page = 1, page_size = 18, ...otherParams }) => ({
-        url: "/products/",
-        params: { page, page_size, ...otherParams },
+    getProducts: build.query<
+      PaginatedResponse & { products: Product[] },
+      GetProductParams
+    >({
+      query: ({ limit = LIMIT, skip = 0, q = "" }) => ({
+        url: "/products/search",
+        params: { limit, skip, q },
       }),
       serializeQueryArgs: getSerializedQueryArgs,
       forceRefetch({ currentArg, previousArg }) {
-        return currentArg?.page !== previousArg?.page;
+        return currentArg?.skip !== previousArg?.skip;
       },
       merge: infintyPaginationMergeHandler,
-      providesTags: ["Product"],
     }),
-    getSpecificProduct: build.query({
-      query: (productSlug) => ({
-        url: `/products/${productSlug}/`,
+
+    getSpecificProduct: build.query<Product, number>({
+      query: (id) => ({
+        url: `/products/${id}`,
       }),
     }),
-    getProductSuggestionList: build.query({
+
+    getProductSuggestionList: build.query<
+      PaginatedResponse & { products: Product[] },
+      string
+    >({
       query: (search) => ({
-        url: "/products/",
+        url: "/products/search",
         params: {
-          autocomplete: true,
-          search,
+          q: search,
+          select: "title,id",
+          limit: 5,
         },
       }),
     }),
