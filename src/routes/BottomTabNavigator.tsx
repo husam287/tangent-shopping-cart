@@ -3,7 +3,6 @@ import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
-import NavigationTab from "@/components/navigation/Tab";
 import METRICS from "@/constants/Metrics";
 import COLORS from "@/constants/Colors";
 import HomeScreen from "@/screens/main/Home";
@@ -11,9 +10,10 @@ import CategoriesScreen from "@/screens/main/Categories";
 import OfferScreen from "@/screens/main/Offers";
 import CartScreen from "@/screens/main/Cart";
 import MainProfileScreen from "@/screens/profile/MainProfile";
-import { NavigationTabProps } from "@/components/navigation/Tab/types";
+import { NavigationTabProps } from "@/components/molecules/Tab/types";
 import { TabParamList } from "./types";
 import MainScreenOptions from "./MainScreenOptions";
+import NavigationTab from "@/components/molecules/Tab";
 
 const TABWIDTH = METRICS.screenWidth / 5;
 

@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import ReactNativeModal from "react-native-modal";
-import NotificationListnerContainer from "@/components/containers/NotificationListnerContainer";
-import SnackbarComponent from "@/components/general/SnackbarComponent";
+import NotificationListnerContainer from "@/components/organisms/NotificationListnerContainer";
+import SnackbarComponent from "@/components/molecules/SnackbarComponent";
 import useCheckNewUpdates from "@/hooks/useCheckNewUpdate";
 import COLORS from "@/constants/Colors";
 import LinkingConfiguration from "./LinkingConfiguration";
@@ -35,9 +35,7 @@ function Route() {
     <SafeAreaProvider>
       <NavigationContainer theme={navTheme} linking={LinkingConfiguration}>
         <NotificationListnerContainer>
-          {/* {!isSignedIn ? <AuthStack /> : <MainStack />} */}
           <MainStack />
-          {/* <AuthStack /> */}
 
           {/* GENERAL MODALS */}
           <SnackbarComponent />

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigation } from "@react-navigation/native";
 import { TouchableOpacity } from "react-native";
-import ScreenWrapper from "@/components/general/ScreenWrapper";
-import Text from "@/components/general/Text";
-import Button from "@/components/general/Button";
-import BottomSheet from "@/components/general/BottomSheet";
+import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import Text from "@/components/atoms/Text";
+import Button from "@/components/atoms/Button";
+import BottomSheet from "@/components/organisms/BottomSheet";
 import styles from "./styles";
 
 export default function HomeScreen() {

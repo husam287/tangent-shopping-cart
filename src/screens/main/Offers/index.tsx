@@ -1,10 +1,10 @@
 import { View } from "react-native";
 import { Controller, useForm } from "react-hook-form";
-import ControllableInput from "@/components/inputs/ControllableInput";
-import Button from "@/components/general/Button";
-import NormalSelectionModal from "@/components/inputs/NormalSelectionModal";
+import ControllableInput from "@/components/molecules/ControllableInput";
+import Button from "@/components/atoms/Button";
+import NormalSelectionModal from "@/components/molecules/NormalSelectionModal";
 import GENDERS from "@/data/genders";
-import ScreenWrapper from "@/components/general/ScreenWrapper";
+import ScreenWrapper from "@/components/organisms/ScreenWrapper";
 import { testSchema } from "@/schemas";
 import useAutoCompleteTranslation from "@/hooks/useAutoCompleteTranslation";
 import { UserInfoBody } from "@/apis/@types/auth";

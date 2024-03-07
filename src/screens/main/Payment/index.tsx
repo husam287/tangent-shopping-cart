@@ -1,6 +1,6 @@
 import { View } from "react-native";
-import Text from "@/components/general/Text";
-import ScreenWrapper from "@/components/general/ScreenWrapper";
+import Text from "@/components/atoms/Text";
+import ScreenWrapper from "@/components/organisms/ScreenWrapper";
 import styles from "./styles";
 
 export default function Payment() {

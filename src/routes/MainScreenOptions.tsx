@@ -2,10 +2,10 @@
 import { NativeStackNavigationOptions } from "@react-navigation/native-stack";
 import { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs";
 import { RouteProp } from "@react-navigation/native";
-import NavigationHeader from "@/components/navigation/Header";
-import PopupHeader from "@/components/navigation/PopupHeader";
 import { MainStackParamList, ScreenOptionsParams } from "./types";
 import METRICS from "@/constants/Metrics";
+import NavigationHeader from "@/components/organisms/Header";
+import PopupHeader from "@/components/organisms/PopupHeader";
 
 export interface DefaultScreenOptionProps {
   route: RouteProp<MainStackParamList, keyof MainStackParamList>;

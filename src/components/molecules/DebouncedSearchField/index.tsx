@@ -3,7 +3,7 @@ import { useMemo, useEffect, useState } from "react";
 import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { debounce } from "lodash-es";
 import Colors from "@/constants/Colors";
-import PureInput from "../PureInput";
+import PureInput from "@/components/atoms/PureInput";
 
 const styles = StyleSheet.create({
   spaceEnd: {

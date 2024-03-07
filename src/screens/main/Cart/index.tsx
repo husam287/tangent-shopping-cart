@@ -1,7 +1,6 @@
-import ScreenWrapper from "@/components/general/ScreenWrapper";
-import Text from "@/components/general/Text";
-import DebouncedSearchField from "@/components/inputs/DebouncedSearchField";
-import DateTimeSelection from "@/components/inputs/DateTimeSelection";
+import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import Text from "@/components/atoms/Text";
+import DebouncedSearchField from "@/components/molecules/DebouncedSearchField";
 import styles from "./styles";
 
 export default function CartScreen() {
@@ -9,8 +8,6 @@ export default function CartScreen() {
     <ScreenWrapper>
       <Text style={styles.title}>Tab Two</Text>
       <DebouncedSearchField onSearchChange={(e) => console.log(e)} />
-
-      <DateTimeSelection />
     </ScreenWrapper>
   );
 }

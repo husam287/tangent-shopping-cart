@@ -3,12 +3,12 @@ import { useState } from "react";
 import ReactNativeModal from "react-native-modal";
 import { SimpleLineIcons, AntDesign } from "@expo/vector-icons";
 import METRICS from "@/constants/Metrics";
-import Text from "@/components/general/Text";
+import Text from "@/components/atoms/Text";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
-import LoadingComponent from "@/components/general/LoadingComponent";
+import LoadingComponent from "@/components/atoms/LoadingComponent";
 import COLORS from "@/constants/Colors";
 import i18n from "@/i18n";
-import PureInput from "../PureInput";
+import PureInput from "@/components/atoms/PureInput";
 import styles from "./styles";
 import { NormalSelectionModalProps } from "./types";
 

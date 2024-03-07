@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
-import ScreenWrapper from "@/components/general/ScreenWrapper";
-import Text from "@/components/general/Text";
-import Img from "@/components/general/Image";
+import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import Text from "@/components/atoms/Text";
+import Img from "@/components/atoms/Image";
 
 const styles = StyleSheet.create({
   imageStyle: {

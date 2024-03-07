@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import i18n from "@/i18n";
-import Button from "@/components/general/Button";
+import Button from "@/components/atoms/Button";
 
 export default function LanguageSection() {
   const onChangeLanguage = (targetLang: string) => {

@@ -1,15 +1,12 @@
 import Animated, { SlideInDown } from "react-native-reanimated";
-import { Link } from "@react-navigation/native";
-import ScreenWrapper from "@/components/general/ScreenWrapper";
-import Text from "@/components/general/Text";
+import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import Text from "@/components/atoms/Text";
 
 export default function CategoriesScreen() {
   return (
     <ScreenWrapper>
       <Animated.View entering={SlideInDown}>
-        <Link to={{ screen: "ProductDetailsScreen" }}>
-          <Text>Tab Two</Text>
-        </Link>
+        <Text>Tab Two</Text>
       </Animated.View>
     </ScreenWrapper>
   );

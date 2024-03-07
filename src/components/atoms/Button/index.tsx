@@ -9,8 +9,8 @@ import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import COLORS from "@/constants/Colors";
 import getShadowStyle from "@/utils/getShadowStyle";
 import { ButtonProps } from "./types";
-import Text from "@/components/general/Text";
-import Icon from "@/components/general/Icon";
+import Text from "@/components/atoms/Text";
+import Icon from "@/components/atoms/Icon";
 import styles from "./styles";
 import { moderateScale, verticalScale } from "@/constants/Metrics";
 

@@ -1,6 +1,6 @@
 import { Controller, Control } from "react-hook-form";
-import PureInput from "./PureInput";
-import { InputFieldProps } from "./PureInput/types";
+import PureInput from "@/components/atoms/PureInput";
+import { InputFieldProps } from "@/components/atoms/PureInput/types";
 
 interface ControllableInputProps extends InputFieldProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

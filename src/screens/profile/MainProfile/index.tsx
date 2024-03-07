@@ -1,5 +1,5 @@
-import ScreenWrapper from "@/components/general/ScreenWrapper";
-import Text from "@/components/general/Text";
+import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import Text from "@/components/atoms/Text";
 import useAutoCompleteTranslation from "@/hooks/useAutoCompleteTranslation";
 import LanguageSection from "./LanguageSection";
 

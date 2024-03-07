@@ -4,9 +4,9 @@ import { TextInput, View, TouchableOpacity } from "react-native";
 
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import COLORS from "@/constants/Colors";
-import Icon from "@/components/general/Icon";
+import Icon from "@/components/atoms/Icon";
 import getShadowStyle from "@/utils/getShadowStyle";
-import Text from "@/components/general/Text";
+import Text from "@/components/atoms/Text";
 import i18n from "@/i18n";
 import styles from "./styles";
 import { InputFieldProps } from "./types";
