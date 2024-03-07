@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigation } from "@react-navigation/native";
 import { TouchableOpacity } from "react-native";
-import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import ScreenWrapper from "@/components/templates/ScreenWrapper";
 import Text from "@/components/atoms/Text";
 import Button from "@/components/atoms/Button";
 import BottomSheet from "@/components/organisms/BottomSheet";

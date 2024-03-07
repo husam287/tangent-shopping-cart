@@ -5,11 +5,11 @@ import {
 } from "@react-navigation/bottom-tabs";
 import METRICS from "@/constants/Metrics";
 import COLORS from "@/constants/Colors";
-import HomeScreen from "@/screens/main/Home";
-import CategoriesScreen from "@/screens/main/Categories";
-import OfferScreen from "@/screens/main/Offers";
-import CartScreen from "@/screens/main/Cart";
-import MainProfileScreen from "@/screens/profile/MainProfile";
+import HomeScreen from "@/components/pages/Home";
+import CategoriesScreen from "@/components/pages/Categories";
+import OfferScreen from "@/components/pages/Offers";
+import CartScreen from "@/components/pages/Cart";
+import MainProfileScreen from "@/components/pages/MainProfile";
 import { NavigationTabProps } from "@/components/molecules/Tab/types";
 import { TabParamList } from "./types";
 import MainScreenOptions from "./MainScreenOptions";

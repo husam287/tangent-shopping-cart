@@ -1,5 +1,5 @@
 import Animated, { SlideInDown } from "react-native-reanimated";
-import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import ScreenWrapper from "@/components/templates/ScreenWrapper";
 import Text from "@/components/atoms/Text";
 
 export default function CategoriesScreen() {

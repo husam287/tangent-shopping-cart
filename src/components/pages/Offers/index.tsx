@@ -4,7 +4,7 @@ import ControllableInput from "@/components/molecules/ControllableInput";
 import Button from "@/components/atoms/Button";
 import NormalSelectionModal from "@/components/molecules/NormalSelectionModal";
 import GENDERS from "@/data/genders";
-import ScreenWrapper from "@/components/organisms/ScreenWrapper";
+import ScreenWrapper from "@/components/templates/ScreenWrapper";
 import { testSchema } from "@/schemas";
 import useAutoCompleteTranslation from "@/hooks/useAutoCompleteTranslation";
 import { UserInfoBody } from "@/apis/@types/auth";

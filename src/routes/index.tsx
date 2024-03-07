@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import ReactNativeModal from "react-native-modal";
-import NotificationListnerContainer from "@/components/organisms/NotificationListnerContainer";
+import NotificationListnerContainer from "@/components/templates/NotificationListnerContainer";
 import SnackbarComponent from "@/components/molecules/SnackbarComponent";
 import useCheckNewUpdates from "@/hooks/useCheckNewUpdate";
 import COLORS from "@/constants/Colors";

@@ -4,8 +4,8 @@ import {
 } from "@react-navigation/native-stack";
 import BottomTabNavigator from "../BottomTabNavigator";
 // Start of screen
-import ProductDetails from "@/screens/main/ProductDetails";
-import Payment from "@/screens/main/Payment";
+import ProductDetails from "@/components/pages/ProductDetails";
+import Payment from "@/components/pages/Payment";
 // End of screen
 import { MainStackParamList } from "../types";
 import MainScreenOptions from "../MainScreenOptions";
