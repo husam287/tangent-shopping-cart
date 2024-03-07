@@ -1,13 +1,14 @@
-import Animated, { SlideInDown } from "react-native-reanimated";
 import ScreenWrapper from "@/components/templates/ScreenWrapper";
-import Text from "@/components/atoms/Text";
+import CategoriesList from "@/components/organisms/CategoriesList";
+import { useGetCategoriesQuery } from "@/apis/services/category";
 
 export default function CategoriesScreen() {
+  const { data: categories, isFetching: isCategoriesLoading } =
+    useGetCategoriesQuery();
+
   return (
     <ScreenWrapper>
-      <Animated.View entering={SlideInDown}>
-        <Text>Tab Two</Text>
-      </Animated.View>
+      <CategoriesList categories={categories} isLoading={isCategoriesLoading} />
     </ScreenWrapper>
   );
 }

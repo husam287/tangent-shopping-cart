@@ -1,9 +1,15 @@
-import { AntDesign } from "@expo/vector-icons";
+import {
+  AntDesign,
+  Entypo,
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+} from "@expo/vector-icons";
 import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
-import METRICS from "@/constants/Metrics";
+import METRICS, { moderateScale } from "@/constants/Metrics";
 import COLORS from "@/constants/Colors";
 import HomeScreen from "@/components/pages/Home";
 import CategoriesScreen from "@/components/pages/Categories";
@@ -21,7 +27,13 @@ function HomeTabBarElement({ focused }: Partial<NavigationTabProps>) {
   return (
     <NavigationTab
       title="HOME"
-      iconComponent={<AntDesign name="home" size={24} color={COLORS.primary} />}
+      iconComponent={
+        <AntDesign
+          name="home"
+          size={moderateScale(24)}
+          color={COLORS.primary}
+        />
+      }
       focused={Boolean(focused)}
       tabWidth={TABWIDTH}
     />
@@ -32,7 +44,13 @@ function CategoryTabBarElement({ focused }: Partial<NavigationTabProps>) {
   return (
     <NavigationTab
       title="CATEGORIES"
-      iconComponent={<AntDesign name="book" size={24} color={COLORS.primary} />}
+      iconComponent={
+        <Ionicons
+          name="grid-outline"
+          size={moderateScale(24)}
+          color={COLORS.primary}
+        />
+      }
       focused={Boolean(focused)}
       tabWidth={TABWIDTH}
     />
@@ -42,9 +60,9 @@ function CategoryTabBarElement({ focused }: Partial<NavigationTabProps>) {
 function OfferTabBarElement({ focused }: Partial<NavigationTabProps>) {
   return (
     <NavigationTab
-      title="OFFERS"
+      title="PRODUCTS"
       iconComponent={
-        <AntDesign name="calculator" size={24} color={COLORS.primary} />
+        <Entypo name="shop" size={moderateScale(24)} color={COLORS.primary} />
       }
       focused={Boolean(focused)}
       tabWidth={TABWIDTH}
@@ -56,7 +74,13 @@ function CartTabBarElement({ focused }: Partial<NavigationTabProps>) {
   return (
     <NavigationTab
       title="CART"
-      iconComponent={<AntDesign name="car" size={24} color={COLORS.primary} />}
+      iconComponent={
+        <MaterialCommunityIcons
+          name="cart-outline"
+          size={moderateScale(24)}
+          color={COLORS.primary}
+        />
+      }
       focused={Boolean(focused)}
       tabWidth={TABWIDTH}
     />
@@ -66,8 +90,14 @@ function CartTabBarElement({ focused }: Partial<NavigationTabProps>) {
 function ProfileTabBarElement({ focused }: Partial<NavigationTabProps>) {
   return (
     <NavigationTab
-      title="PROFILE"
-      iconComponent={<AntDesign name="user" size={24} color={COLORS.primary} />}
+      title="WISHLIST"
+      iconComponent={
+        <MaterialIcons
+          name="favorite-outline"
+          size={moderateScale(24)}
+          color={COLORS.primary}
+        />
+      }
       focused={Boolean(focused)}
       tabWidth={TABWIDTH}
     />

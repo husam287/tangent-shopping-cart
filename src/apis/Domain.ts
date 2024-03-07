@@ -1,4 +1,3 @@
-// const DomainUrl = "https://khazen-be-prod.khazyn.app"
-const DomainUrl = "https://arma.bit68.com";
+const DomainUrl = "https://dummyjson.com";
 
 export default DomainUrl;

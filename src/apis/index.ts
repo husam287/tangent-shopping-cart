@@ -31,10 +31,10 @@ const baseQuery = async (
   api: BaseQueryApi,
   extraOptions: object
 ) => {
-  const lang = await AsyncStorage.getItem("lang");
-  const languageText = lang?.includes("ar") ? "ar" : "en";
-
-  const baseUrl = `${DomainUrl}/${languageText}/api`;
+  // const lang = await AsyncStorage.getItem("lang");
+  // const languageText = lang?.includes("ar") ? "ar" : "en";
+  // const baseUrl = `${DomainUrl}/${languageText}/api`;
+  const baseUrl = `${DomainUrl}`;
 
   return rawBaseQuery(baseUrl)(args, api, extraOptions);
 };
