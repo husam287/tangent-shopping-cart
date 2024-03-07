@@ -5,6 +5,7 @@ import Colors from "@/constants/Colors";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import Text from "./Text";
 import { TranslationKeyEnum } from "@/@types/TranslationKeyEnum";
+import { horizontalScale, moderateScale } from "@/constants/Metrics";
 
 const styles = StyleSheet.create({
   centering: {
@@ -12,8 +13,8 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: Colors.secondary,
-    fontSize: 14,
-    marginStart: 5,
+    fontSize: moderateScale(14),
+    marginStart: horizontalScale(5),
   },
 });
 
@@ -24,7 +25,11 @@ export default function EmptyComponent({
 }) {
   return (
     <View style={[GLOBAL_STYLES.row, styles.centering]}>
-      <AntDesign name="inbox" size={18} color={Colors.secondary} />
+      <AntDesign
+        name="inbox"
+        size={moderateScale(18)}
+        color={Colors.secondary}
+      />
       <Text i18nKey={i18nKey} style={styles.textStyle} />
     </View>
   );

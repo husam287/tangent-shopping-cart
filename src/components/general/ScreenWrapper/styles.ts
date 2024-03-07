@@ -1,13 +1,13 @@
 import { StyleSheet } from "react-native";
 import COLORS from "@/constants/Colors";
-import METRICS from "@/constants/Metrics";
+import METRICS, { verticalScale } from "@/constants/Metrics";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
     padding: METRICS.generalSpacingValue,
-    paddingTop: 10,
+    paddingTop: verticalScale(10),
     width: METRICS.screenWidth,
   },
   innerConatiner: {

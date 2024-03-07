@@ -2,12 +2,13 @@ import { I18nManager, Text as DefaultText, TextStyle } from "react-native";
 import useAutoCompleteTranslation from "@/hooks/useAutoCompleteTranslation";
 import COLORS from "@/constants/Colors";
 import { TextProps } from "./types";
+import { moderateScale } from "@/constants/Metrics";
 
 export default function Text({
   children,
   i18nKey,
   style,
-  fontSize = 14,
+  fontSize = moderateScale(14),
   fontFamily = "font400",
   color = "dark",
   ...otherProps

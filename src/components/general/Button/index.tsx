@@ -12,6 +12,7 @@ import { ButtonProps } from "./types";
 import Text from "@/components/general/Text";
 import Icon from "@/components/general/Icon";
 import styles from "./styles";
+import { moderateScale, verticalScale } from "@/constants/Metrics";
 
 export default function Button({
   title,
@@ -21,11 +22,11 @@ export default function Button({
   backgroundColor = COLORS.primary,
   borderColor,
   disabled = false,
-  btnHeight = 52,
+  btnHeight = verticalScale(52),
   buttonCustomStyle,
   textCustomStyle,
-  fontSize = 16,
-  iconSize = 18,
+  fontSize = moderateScale(16),
+  iconSize = moderateScale(18),
   prefix,
   IconName,
   isLoading,
@@ -77,7 +78,7 @@ export default function Button({
           {suffix && <View style={styles.suffixSpacing}>{suffix}</View>}
         </View>
       ) : (
-        <ActivityIndicator color={color} size={24} />
+        <ActivityIndicator color={color} size={moderateScale(24)} />
       )}
     </TouchableOpacity>
   );

@@ -5,6 +5,7 @@ import ActionSheet, { ActionSheetRef } from "react-native-actions-sheet";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import { BottomSheetProps } from "./types";
 import styles from "./styles";
+import { moderateScale } from "@/constants/Metrics";
 
 export default function BottomSheet({
   isVisible,
@@ -43,7 +44,7 @@ export default function BottomSheet({
         {!isCloseButtonHidden && (
           <View style={[GLOBAL_STYLES.row, styles.sheetContainer]}>
             <TouchableOpacity style={styles.spacing} onPress={close}>
-              <AntDesign name="close" size={18} color="black" />
+              <AntDesign name="close" size={moderateScale(18)} color="black" />
             </TouchableOpacity>
           </View>
         )}

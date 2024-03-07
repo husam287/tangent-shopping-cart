@@ -1,26 +1,31 @@
 import { StyleSheet } from "react-native";
 import COLORS from "@/constants/Colors";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
+import {
+  horizontalScale,
+  moderateScale,
+  verticalScale,
+} from "@/constants/Metrics";
 
 const styles = StyleSheet.create({
   button: {
     alignItems: "center",
-    borderRadius: 16,
+    borderRadius: moderateScale(16),
     flexDirection: "row",
-    height: 40,
+    height: verticalScale(40),
     justifyContent: "center",
-    paddingHorizontal: 15,
+    paddingHorizontal: horizontalScale(15),
   },
   prefixSpacing: {
-    marginEnd: 10,
+    marginEnd: horizontalScale(10),
   },
-  smallSpaceEnd: { marginEnd: 4 },
+  smallSpaceEnd: { marginEnd: horizontalScale(4) },
   suffixSpacing: {
-    marginStart: 10,
+    marginStart: horizontalScale(10),
   },
   text: {
     color: COLORS.light,
-    fontSize: 16,
+    fontSize: moderateScale(16),
     textAlign: "center",
     ...GLOBAL_STYLES.font700,
   },

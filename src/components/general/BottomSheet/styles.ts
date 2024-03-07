@@ -1,17 +1,22 @@
 import { StyleSheet } from "react-native";
+import {
+  horizontalScale,
+  moderateScale,
+  verticalScale,
+} from "@/constants/Metrics";
 
 const styles = StyleSheet.create({
   sheetContainer: {
     justifyContent: "flex-end",
-    padding: 10,
-    paddingHorizontal: 20,
+    padding: moderateScale(10),
+    paddingHorizontal: horizontalScale(20),
   },
-  spaceTop: { marginTop: 10 },
+  spaceTop: { marginTop: verticalScale(10) },
   spacing: {
-    marginStart: -20,
-    marginTop: -20,
-    paddingStart: 20,
-    paddingTop: 20,
+    marginStart: -horizontalScale(20),
+    marginTop: -verticalScale(20),
+    paddingStart: horizontalScale(20),
+    paddingTop: verticalScale(20),
   },
 });
 

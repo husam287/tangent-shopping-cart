@@ -10,13 +10,16 @@ import Text from "@/components/general/Text";
 import i18n from "@/i18n";
 import styles from "./styles";
 import { InputFieldProps } from "./types";
+import { moderateScale } from "@/constants/Metrics";
 
 export default function PureInput({
   error,
   editable = true,
   customContainerStyle,
   prefix,
-  suffix = <Icon name="edit" color={COLORS.darkGrey} size={14} />,
+  suffix = (
+    <Icon name="edit" color={COLORS.darkGrey} size={moderateScale(14)} />
+  ),
   placeholder = i18n.t("DEFAULT_PLACEHOLDER"),
   textContentType,
   placeholderTextColor = `${COLORS.headlineDark}8A`,
@@ -39,7 +42,7 @@ export default function PureInput({
         <View style={GLOBAL_STYLES.row}>
           <FontAwesome
             name="exclamation"
-            size={14}
+            size={moderateScale(14)}
             color={COLORS.secondary}
             style={styles.spaceAround}
           />
@@ -57,7 +60,7 @@ export default function PureInput({
     >
       <Ionicons
         name={showPassword ? "md-eye-outline" : "md-eye-off-outline"}
-        size={24}
+        size={moderateScale(24)}
         color={COLORS.primary}
       />
     </TouchableOpacity>

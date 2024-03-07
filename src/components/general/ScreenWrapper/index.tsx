@@ -8,7 +8,7 @@ import {
 
 import { getStatusBarHeight } from "react-native-status-bar-height";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
-import METRICS from "@/constants/Metrics";
+import METRICS, { verticalScale } from "@/constants/Metrics";
 import { ScreenWrapperProps } from "./types";
 import styles from "./styles";
 
@@ -22,7 +22,7 @@ export default function ScreenWrapper({
 }: ScreenWrapperProps) {
   const extraStyle: ViewStyle = {
     justifyContent: hasVerticalSpaceBetween ? "space-between" : "flex-start",
-    paddingTop: isHeaderHidden ? getStatusBarHeight() : 10,
+    paddingTop: isHeaderHidden ? getStatusBarHeight() : verticalScale(10),
   };
 
   const allContainerStyle = [
