@@ -6,9 +6,11 @@ import usePaginatedRequest from "@/hooks/usePaginatedRequest";
 import { useLazyGetCategoryProductsQuery } from "@/apis/services/category";
 import { Product } from "@/apis/@types/product";
 import { MainStackParamList } from "@/routes/types";
+import ListActionsHeader from "@/components/organisms/ListActionsHeader";
 
 export default function CategoryProducts() {
   const navigation = useNavigation();
+  const [isListView, setIsListView] = useState(false);
 
   const selectedCategory =
     useRoute<RouteProp<MainStackParamList, "CategoryProducts">>()?.params
@@ -29,12 +31,23 @@ export default function CategoryProducts() {
     navigation.setParams({ title: selectedCategory });
   }, []);
 
+  const ProductListHeaderMarkup = (
+    <ListActionsHeader
+      searchValue="Hosam"
+      onListViewChange={() => setIsListView(!isListView)}
+      isListView={isListView}
+      isSearchHidden
+    />
+  );
+
   return (
     <ScreenWrapper>
       <ProductsList
         products={data?.products}
         loadMoreData={loadMoreData}
         isLoading={isLoading}
+        isListView={isListView}
+        HeaderComponent={ProductListHeaderMarkup}
       />
     </ScreenWrapper>
   );

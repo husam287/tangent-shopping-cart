@@ -55,7 +55,9 @@ export default function Button({
     >
       {!isLoading ? (
         <View style={GLOBAL_STYLES.row}>
-          {prefix && <View style={styles.prefixSpacing}>{prefix}</View>}
+          {prefix && (
+            <View style={hasTitle && styles.prefixSpacing}>{prefix}</View>
+          )}
 
           {!!IconName && (
             <Icon

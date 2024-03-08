@@ -15,8 +15,9 @@ export default function ProductsList({
     <FlatList
       keyExtractor={(item) => `${item.id}`}
       data={products}
+      key={isListView ? "list" : "grid"}
       numColumns={isListView ? 1 : 2}
-      columnWrapperStyle={{ gap: moderateScale(10) }}
+      columnWrapperStyle={!isListView && { gap: moderateScale(10) }}
       contentContainerStyle={{ gap: moderateScale(10) }}
       showsVerticalScrollIndicator={false}
       ListHeaderComponent={() => HeaderComponent}

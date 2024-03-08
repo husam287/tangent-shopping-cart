@@ -5,7 +5,6 @@ import { TextInput, View, TouchableOpacity } from "react-native";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import COLORS from "@/constants/Colors";
 import Icon from "@/components/atoms/Icon";
-import getShadowStyle from "@/utils/getShadowStyle";
 import Text from "@/components/atoms/Text";
 import i18n from "@/i18n";
 import styles from "./styles";
@@ -71,7 +70,6 @@ export default function PureInput({
   const inputContainerStyles = [
     styles.inputContainer,
     customContainerStyle,
-    getShadowStyle(),
     hasErrors && styles.errorBorder,
     isTextAreaInput && styles.textAreaContainer,
   ];
@@ -92,7 +90,7 @@ export default function PureInput({
   );
 
   return (
-    <View style={styles.spaceBottom}>
+    <View>
       {LabelMarkup}
 
       <View pointerEvents={pointerEventValue} style={inputContainerStyles}>
