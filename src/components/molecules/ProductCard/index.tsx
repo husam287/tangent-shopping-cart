@@ -8,9 +8,10 @@ import { moderateScale } from "@/constants/Metrics";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import Button from "@/components/atoms/Button";
 
-export default function ProductCard({ product }: ProductCardProps) {
-  const onClickAddToCart = () => {};
-
+export default function ProductCard({
+  product,
+  onClickAddToCart,
+}: ProductCardProps) {
   return (
     <View style={styles.container}>
       <Img source={product.thumbnail} style={styles.image} />
@@ -45,7 +46,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </View>
 
         <Button
-          onPress={onClickAddToCart}
+          onPress={() => onClickAddToCart?.()}
           title="ADD TO CART"
           buttonCustomStyle={styles.btn}
         />
