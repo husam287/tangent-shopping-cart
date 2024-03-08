@@ -14,7 +14,7 @@ type BaseParams<T = unknown> = (ScreenOptionsParams & T) | undefined;
 export type TabParamList = {
   HomeScreen: BaseParams;
   CategoriesScreen: BaseParams;
-  OfferScreen: BaseParams;
+  ProductsScreen: BaseParams;
   CartScreen: BaseParams;
   MainProfileScreen: BaseParams;
 };

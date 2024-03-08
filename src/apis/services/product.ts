@@ -45,7 +45,7 @@ export const ProductApi = api.injectEndpoints({
 });
 
 export const {
-  useGetProductsQuery,
+  useLazyGetProductsQuery,
   useGetSpecificProductQuery,
   useGetProductSuggestionListQuery,
 } = ProductApi;

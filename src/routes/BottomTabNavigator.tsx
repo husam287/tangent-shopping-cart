@@ -13,7 +13,7 @@ import METRICS, { moderateScale } from "@/constants/Metrics";
 import COLORS from "@/constants/Colors";
 import HomeScreen from "@/components/pages/Home";
 import CategoriesScreen from "@/components/pages/Categories";
-import OfferScreen from "@/components/pages/Offers";
+import ProductsScreen from "@/components/pages/Products";
 import CartScreen from "@/components/pages/Cart";
 import MainProfileScreen from "@/components/pages/MainProfile";
 import { NavigationTabProps } from "@/components/molecules/Tab/types";
@@ -57,7 +57,7 @@ function CategoryTabBarElement({ focused }: Partial<NavigationTabProps>) {
   );
 }
 
-function OfferTabBarElement({ focused }: Partial<NavigationTabProps>) {
+function ProductsTabBarElement({ focused }: Partial<NavigationTabProps>) {
   return (
     <NavigationTab
       title="PRODUCTS"
@@ -130,12 +130,12 @@ export default function BottomTabNavigator() {
       />
 
       <Tabs.Screen
-        name="OfferScreen"
-        initialParams={{ title: "Offers" }}
+        name="ProductsScreen"
+        initialParams={{ title: "Products" }}
         options={{
-          tabBarIcon: OfferTabBarElement,
+          tabBarIcon: ProductsTabBarElement,
         }}
-        component={OfferScreen}
+        component={ProductsScreen}
       />
 
       <Tabs.Screen
