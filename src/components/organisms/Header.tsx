@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     color: Colors.primary,
     fontSize: moderateScale(18),
+    textTransform: "capitalize",
     ...GLOBAL_STYLES.font500,
   },
   hiddenStyle: { opacity: 0 },

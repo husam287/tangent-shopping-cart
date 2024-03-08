@@ -21,6 +21,7 @@ export type TabParamList = {
 
 export type MainStackParamList = {
   Root: NavigatorScreenParams<TabParamList>;
+  CategoryProducts: BaseParams<{ category: string }>;
   Payment: BaseParams;
   ProductDetails: BaseParams<{ productId?: string }>;
   ProductDetailsModal: BaseParams<{ productId?: string }>;

@@ -6,6 +6,7 @@ import BottomTabNavigator from "../BottomTabNavigator";
 // Start of screen
 import ProductDetails from "@/components/pages/ProductDetails";
 import Payment from "@/components/pages/Payment";
+import CategoryProducts from "@/components/pages/CategoryProducts";
 // End of screen
 import { MainStackParamList } from "../types";
 import MainScreenOptions from "../MainScreenOptions";
@@ -49,6 +50,14 @@ export default function MainStack() {
         component={Payment}
         initialParams={{
           title: "Payment",
+        }}
+      />
+
+      <Stack.Screen
+        name="CategoryProducts"
+        component={CategoryProducts}
+        initialParams={{
+          title: "CategoryProducts",
         }}
       />
     </Stack.Navigator>

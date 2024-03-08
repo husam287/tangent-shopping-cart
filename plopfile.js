@@ -10,12 +10,12 @@ const screenPlopGeneratorObject = {
   actions: [
     {
       type: "add",
-      path: "src/screens/{{capitallizeComponentName name}}/index.tsx",
+      path: "src/components/pages/{{capitallizeComponentName name}}/index.tsx",
       templateFile: "templates/Screen.tsx.hbs",
     },
     {
         type: "add",
-        path: "src/screens/{{capitallizeComponentName name}}/styles.ts",
+        path: "src/components/pages/{{capitallizeComponentName name}}/styles.ts",
         templateFile: "templates/Styles.ts.hbs",
     },
     {

@@ -9,7 +9,7 @@ export default function getSerializedQueryArgs({
   let result = endpointName;
 
   Object.keys(queryArgs || {}).forEach((key) => {
-    if (key === "page") {
+    if (key === "skip") {
       return;
     }
     result = `${result}-(${key}=${queryArgs[key]})`;

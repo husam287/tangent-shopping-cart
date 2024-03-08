@@ -31,5 +31,6 @@
   "REQUIRED": "required",
   "WRONG_PHONE_FORMATE": "Wrong phone number",
   "PASSWORD_DONT_MATCH": "Passwords don't match",
-  "HOME_KEY_TEST": "hi"
+  "HOME_KEY_TEST": "hi",
+  "FREE": "free"
 }
