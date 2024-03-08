@@ -8,6 +8,7 @@ import { moderateScale } from "@/constants/Metrics";
 import QtyCounter from "../QtyCounter";
 import Button from "@/components/atoms/Button";
 import COLORS from "@/constants/Colors";
+import GLOBAL_STYLES from "@/constants/GlobalStyles";
 
 export default function CartItem({
   product,
@@ -21,7 +22,7 @@ export default function CartItem({
       <View style={styles.cartInnerContainer}>
         <Img source={product.thumbnail} style={styles.image} />
 
-        <View>
+        <View style={GLOBAL_STYLES.fullSize}>
           <Text
             fontSize={moderateScale(18)}
             fontFamily="font700"
@@ -48,7 +49,7 @@ export default function CartItem({
             prefix={
               <MaterialIcons
                 name="delete-outline"
-                size={moderateScale(21)}
+                size={moderateScale(18)}
                 color={COLORS.light}
               />
             }

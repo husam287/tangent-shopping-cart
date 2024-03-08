@@ -43,7 +43,7 @@ export default function CartAddationBottomSheet({
       </View>
 
       <Button
-        title={`ADD (${toCurrency(13 * product.price)})`}
+        title={`ADD (${toCurrency(qty * product.price)})`}
         onPress={onAddToCart}
       />
     </BottomSheet>
