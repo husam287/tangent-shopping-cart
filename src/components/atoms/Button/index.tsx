@@ -7,7 +7,6 @@ import {
 
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import COLORS from "@/constants/Colors";
-import getShadowStyle from "@/utils/getShadowStyle";
 import { ButtonProps } from "./types";
 import Text from "@/components/atoms/Text";
 import Icon from "@/components/atoms/Icon";
@@ -48,7 +47,7 @@ export default function Button({
 
   return (
     <TouchableOpacity
-      style={[styles.button, customStyle, getShadowStyle()]}
+      style={[styles.button, customStyle]}
       disabled={disabled || isLoading}
       activeOpacity={disabled ? 1 : 0.2}
       onPress={onPress}
