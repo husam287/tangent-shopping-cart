@@ -4,6 +4,7 @@ import HomeProductSlider from "@/components/organisms/HomeProductSlider";
 import { useGetProductsQuery } from "@/apis/services/product";
 import Paper from "@/components/templates/Paper";
 import ScrollViewWithoutBar from "@/components/templates/ScrollViewWithoutBar";
+import AdvertiseSliderBanner from "@/components/organisms/AdvertiseSliderBanner";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -18,6 +19,10 @@ export default function HomeScreen() {
   return (
     <ScreenWrapper>
       <ScrollViewWithoutBar>
+        <Paper>
+          <AdvertiseSliderBanner />
+        </Paper>
+
         <Paper>
           <HomeProductSlider
             listTitle="Featured Products"
