@@ -1,65 +1,41 @@
-import { useState } from "react";
-import { Link, useNavigation } from "@react-navigation/native";
-import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import ScreenWrapper from "@/components/templates/ScreenWrapper";
-import Text from "@/components/atoms/Text";
-import Button from "@/components/atoms/Button";
-import BottomSheet from "@/components/organisms/BottomSheet";
-import styles from "./styles";
+import HomeProductSlider from "@/components/organisms/HomeProductSlider";
+import { useGetProductsQuery } from "@/apis/services/product";
+import Paper from "@/components/templates/Paper";
+import ScrollViewWithoutBar from "@/components/templates/ScrollViewWithoutBar";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
 
-  const [isBottomSheetVisible, setisBottomSheetVisible] = useState(false);
+  const { data: featuredProducts, isFetching: isFeaturedProductsLoading } =
+    useGetProductsQuery({});
 
-  const onShowBottomSheet = () => {
-    setisBottomSheetVisible(true);
-  };
-
-  const goToProfile = () => {
-    navigation.navigate("Root", {
-      screen: "MainProfileScreen",
-      params: { title: "New Profile" },
-    });
+  const onGoToFeaturedProduct = () => {
+    navigation.navigate("Root", { screen: "ProductsScreen" });
   };
 
   return (
     <ScreenWrapper>
-      <Text>click home button to show bottom sheet</Text>
+      <ScrollViewWithoutBar>
+        <Paper>
+          <HomeProductSlider
+            listTitle="Featured Products"
+            products={featuredProducts?.products || []}
+            listNavAction={onGoToFeaturedProduct}
+            isLoading={isFeaturedProductsLoading}
+          />
+        </Paper>
 
-      <Button onPress={onShowBottomSheet} i18nKey="HOME" />
-
-      <Text style={styles.title} i18nKey="HOME" />
-
-      <Link
-        to={{ screen: "ProductDetails", params: { productId: "si" } }}
-        style={styles.title}
-      >
-        go to product details
-      </Link>
-
-      <Link
-        to={{ screen: "ProductDetailsModal", params: { productId: "si" } }}
-        style={styles.title}
-      >
-        go to product modal
-      </Link>
-
-      <TouchableOpacity onPress={goToProfile}>
-        <Text style={styles.title}>go to profie</Text>
-      </TouchableOpacity>
-
-      <BottomSheet
-        isVisible={isBottomSheetVisible}
-        setVisible={setisBottomSheetVisible}
-        draggable
-      >
-        <Text>
-          hiiii
-          <Text>noooooooooo</Text>
-          <Text>noooooooooo</Text>
-        </Text>
-      </BottomSheet>
+        <Paper>
+          <HomeProductSlider
+            listTitle="Liked Products"
+            products={featuredProducts?.products || []}
+            listNavAction={onGoToFeaturedProduct}
+            isLoading={isFeaturedProductsLoading}
+          />
+        </Paper>
+      </ScrollViewWithoutBar>
     </ScreenWrapper>
   );
 }
