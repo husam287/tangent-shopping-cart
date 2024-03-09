@@ -38,7 +38,6 @@ export default function usePaginatedRequest<T = any>({
 
   const getData = ({ isPagenatedRequest = false } = {}) => {
     const skip = ((!isPagenatedRequest ? 1 : page) - 1) * LIMIT;
-    console.log(skip);
     if (!isPagenatedRequest && page !== 1) {
       setPage(1);
       return SUCCESS_DUMMY_PROMISE;

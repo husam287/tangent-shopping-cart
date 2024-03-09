@@ -7,6 +7,7 @@ import styles from "./styles";
 
 function Img({ containerStyle, style, ...otherProps }: ImgProps) {
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoaderHidded, setisLoaderHidded] = useState(false);
 
   return (
     <View style={containerStyle}>
@@ -16,11 +17,13 @@ function Img({ containerStyle, style, ...otherProps }: ImgProps) {
         }}
         onLoadEnd={() => {
           setIsLoading(false);
+          setisLoaderHidded(true);
         }}
         style={style}
+        transition={200}
         {...otherProps}
       />
-      {isLoading && (
+      {isLoading && !isLoaderHidded && (
         <View style={[styles.loadingFullContainer, style]}>
           <LoadingComponent />
         </View>
