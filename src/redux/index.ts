@@ -4,6 +4,7 @@ import rtkQueryErrorLogger from "@/apis/middlewares/errorMiddleware";
 import appReducer from "./appReducer";
 import authReducer from "./authReducer";
 import cartReducer from "./cartReducer";
+import cartBottomSheetReducer from "./cartBottomSheetReducer";
 
 const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ const store = configureStore({
     auth: authReducer,
     app: appReducer,
     cart: cartReducer,
+    cartBottomSheet: cartBottomSheetReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(api.middleware).concat(rtkQueryErrorLogger),

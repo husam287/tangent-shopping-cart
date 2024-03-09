@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { View } from "react-native";
-import { CartAddationBottomSheetProps } from "./types";
+import { useDispatch, useSelector } from "react-redux";
 import BottomSheet from "../BottomSheet";
 import Button from "@/components/atoms/Button";
 import toCurrency from "@/utils/toCurrency";
@@ -8,40 +8,47 @@ import CartItem from "@/components/molecules/CartItem";
 import styles from "./styles";
 import useCart from "@/hooks/useCart";
 import showSuccessMsg from "@/utils/showSuccessMsg";
+import { RootState } from "@/redux";
+import { closeCartBottomSheet } from "@/redux/cartBottomSheetReducer";
 
-export default function CartAddationBottomSheet({
-  isVisible,
-  setVisible,
-  product,
-}: CartAddationBottomSheetProps) {
+export default function CartAddationBottomSheet() {
+  const dispatch = useDispatch();
+  const selectedProduct = useSelector(
+    (state: RootState) => state.cartBottomSheet.selectedProduct
+  );
+
   const [qty, setqty] = useState(1);
   const { addToCart } = useCart();
 
+  const dismissSheet = () => {
+    dispatch(closeCartBottomSheet());
+  };
+
   const onAddToCart = () => {
-    if (!product) return;
-    addToCart({ product, quantity: qty });
-    setVisible(false);
-    showSuccessMsg({ msg: `${product.title} has been added to cart!` });
+    if (!selectedProduct) return;
+    addToCart({ product: selectedProduct, quantity: qty });
+    showSuccessMsg({ msg: `${selectedProduct.title} has been added to cart!` });
+    dismissSheet();
   };
 
   useEffect(() => {
-    if (!isVisible) {
+    if (!selectedProduct) {
       setqty(1);
     }
-  }, [isVisible]);
+  }, [selectedProduct]);
 
-  if (!product) return null;
+  if (!selectedProduct) return null;
 
   return (
     <BottomSheet
-      isVisible={isVisible}
-      setVisible={setVisible}
+      isVisible={!!selectedProduct}
+      setVisible={dismissSheet}
       draggable
       isCloseButtonHidden
     >
       <View style={styles.spaceBottom}>
         <CartItem
-          product={product}
+          product={selectedProduct}
           quantity={qty}
           minValue={1}
           onQtyChange={setqty}
@@ -49,7 +56,7 @@ export default function CartAddationBottomSheet({
       </View>
 
       <Button
-        title={`ADD (${toCurrency(qty * product.price)})`}
+        title={`ADD (${toCurrency(qty * selectedProduct.price)})`}
         onPress={onAddToCart}
       />
     </BottomSheet>

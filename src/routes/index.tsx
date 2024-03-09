@@ -13,6 +13,7 @@ import MainStack from "./stacks/MainStack";
 import { RootState } from "@/redux";
 import useCheckingForcedStoreUpdate from "@/hooks/useCheckingForcedStoreUpdate";
 import useCheckAuthTokenExistance from "@/hooks/useCheckAuthTokenExistance";
+import CartAddationBottomSheet from "@/components/organisms/CartAddationBottomSheet";
 
 function Route() {
   const isSignedIn = useSelector((state: RootState) => state.auth.token);
@@ -39,6 +40,7 @@ function Route() {
 
           {/* GENERAL MODALS */}
           <SnackbarComponent />
+          <CartAddationBottomSheet />
           <ReactNativeModal>
             <SnackbarComponent />
           </ReactNativeModal>
