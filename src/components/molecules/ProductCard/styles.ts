@@ -1,5 +1,9 @@
 import { StyleSheet } from "react-native";
-import { moderateScale, verticalScale } from "@/constants/Metrics";
+import {
+  horizontalScale,
+  moderateScale,
+  verticalScale,
+} from "@/constants/Metrics";
 import COLORS from "@/constants/Colors";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 
@@ -33,6 +37,11 @@ const styles = StyleSheet.create({
     marginVertical: verticalScale(3),
     paddingVertical: verticalScale(3),
     ...GLOBAL_STYLES.rowJustifyBetween,
+  },
+  productHeader: {
+    ...GLOBAL_STYLES.rowJustifyBetween,
+    alignItems: "flex-start",
+    gap: horizontalScale(5),
   },
 });
 

@@ -11,13 +11,14 @@ import Button from "@/components/atoms/Button";
 export default function ProductCard({
   product,
   onClickAddToCart,
+  containerStyle,
 }: ProductCardProps) {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       <Img source={product.thumbnail} style={styles.image} />
 
       <View style={styles.cardSpacing}>
-        <View style={[GLOBAL_STYLES.rowJustifyBetween, styles.alignStart]}>
+        <View style={styles.productHeader}>
           <View style={GLOBAL_STYLES.fullSize}>
             <Text
               fontSize={moderateScale(18)}
@@ -36,13 +37,15 @@ export default function ProductCard({
             </Text>
           </View>
 
-          <Text
-            fontSize={moderateScale(18)}
-            fontFamily="font700"
-            color="primary"
-          >
-            {toCurrency(product.price)}
-          </Text>
+          <View>
+            <Text
+              fontSize={moderateScale(18)}
+              fontFamily="font700"
+              color="primary"
+            >
+              {toCurrency(product.price)}
+            </Text>
+          </View>
         </View>
 
         <Button
