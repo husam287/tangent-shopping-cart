@@ -3,7 +3,7 @@ import { horizontalScale, moderateScale } from "@/constants/Metrics";
 import { NavigationTabProps } from "./types";
 import styles from "./styles";
 
-const SPACE_BETWEEN = horizontalScale(10.5);
+const SPACE_BETWEEN = horizontalScale(5);
 
 export default function NavigationTab({
   focused,
@@ -25,7 +25,9 @@ export default function NavigationTab({
   return (
     <View style={[containerStyle, focusContainer]}>
       {iconComponent}
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.text} numberOfLines={1}>
+        {title}
+      </Text>
     </View>
   );
 }

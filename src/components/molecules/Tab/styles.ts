@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.dark,
+    flexWrap: "nowrap",
     fontSize: moderateScale(10),
     ...GLOBAL_STYLES.font700,
   },
