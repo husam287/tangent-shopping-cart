@@ -4,10 +4,12 @@ import { CartItem } from "@/apis/@types/cart";
 
 interface ICartState {
   cart: CartItem[];
+  initiated: boolean;
 }
 
 const initialState: ICartState = {
   cart: [],
+  initiated: false,
 };
 
 export const cartSlice = createSlice({
@@ -58,6 +60,11 @@ export const cartSlice = createSlice({
         targetCartItem.quantity = action.payload.quantity;
       }
     },
+
+    markAsInitiated: (state) => ({
+      ...state,
+      initiated: true,
+    }),
   },
 });
 
@@ -68,6 +75,7 @@ export const {
   removeCartItem,
   addCartItem,
   editCartItem,
+  markAsInitiated,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

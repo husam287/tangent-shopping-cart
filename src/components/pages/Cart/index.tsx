@@ -1,20 +1,28 @@
 import { FlatList } from "react-native";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { debounce } from "lodash-es";
 import ScreenWrapper from "@/components/templates/ScreenWrapper";
 import CartItem from "@/components/molecules/CartItem";
 import { Product } from "@/apis/@types/product";
-import { useLazyGetProductsQuery } from "@/apis/services/product";
 import { verticalScale } from "@/constants/Metrics";
 import EmptyComponent from "@/components/atoms/EmptyComponent";
+import useCart from "@/hooks/useCart";
+import LoadingComponent from "@/components/atoms/LoadingComponent";
+import showSuccessMsg from "@/utils/showSuccessMsg";
+import Button from "@/components/atoms/Button";
+import toCurrency from "@/utils/toCurrency";
 
 export default function CartScreen() {
+  const { cart, isCartLoading, removeFromCart, editCartItemQuantity } =
+    useCart();
+
   const onDeleteItem = (product: Product) => {
-    console.log(product);
+    removeFromCart(product.id);
+    showSuccessMsg({ msg: `${product.title} has been removed successfully!` });
   };
 
   const onEditCartItemQty = (product: Product, newQty: number) => {
-    console.log(product, newQty);
+    editCartItemQuantity(product.id, newQty);
   };
 
   const debouncedEditCartHandler = useMemo(
@@ -22,27 +30,46 @@ export default function CartScreen() {
     []
   );
 
-  const [trigger, { data }] = useLazyGetProductsQuery();
+  const getTotalPrice = () => {
+    const totalPrice = cart.reduce(
+      (sum, item) => item.product.price * item.quantity + sum,
+      0
+    );
 
-  useEffect(() => {
-    trigger({});
-  }, []);
+    return toCurrency(totalPrice);
+  };
+
+  const onGoToCheckout = () => {
+    // TODO
+  };
+
+  const CheckoutButtonMarkup = (
+    <Button
+      title={`Checkout (${getTotalPrice()})`}
+      onPress={onGoToCheckout}
+      btnHeight={58}
+    />
+  );
 
   return (
     <ScreenWrapper>
       <FlatList
-        data={data?.products}
-        keyExtractor={(item) => `${item.id}`}
+        data={cart}
+        keyExtractor={(item) => `${item.product.id}`}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ gap: verticalScale(30) }}
-        ListEmptyComponent={<EmptyComponent i18nKey="EMPTY_CART" />}
+        ListEmptyComponent={
+          !isCartLoading ? <EmptyComponent i18nKey="EMPTY_CART" /> : null
+        }
+        ListHeaderComponent={isCartLoading ? <LoadingComponent /> : null}
+        ListFooterComponent={cart?.length ? CheckoutButtonMarkup : null}
         renderItem={({ item }) => (
           <CartItem
-            deleteItemFromCart={() => onDeleteItem(item)}
-            product={item}
-            quantity={4}
+            deleteItemFromCart={() => onDeleteItem(item.product)}
+            product={item.product}
+            quantity={item.quantity}
             minValue={0}
-            onQtyChange={(e) => debouncedEditCartHandler(item, e)}
+            onQtyChange={(e) => debouncedEditCartHandler(item.product, e)}
           />
         )}
       />

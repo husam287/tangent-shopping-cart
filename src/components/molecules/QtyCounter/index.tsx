@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { Entypo } from "@expo/vector-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Text from "@/components/atoms/Text";
 import { QtyCounterProps } from "./types";
 import styles from "./styles";
@@ -29,6 +29,12 @@ export default function QtyCounter({
     onCounterChange?.(counter - 1);
     setcounter(counter - 1);
   };
+
+  useEffect(() => {
+    if (counter === initValue) return;
+
+    setcounter(initValue);
+  }, [initValue]);
 
   return (
     <View style={styles.container}>

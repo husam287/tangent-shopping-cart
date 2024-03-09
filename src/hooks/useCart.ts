@@ -6,19 +6,22 @@ import {
   addCartItem,
   editCartItem,
   initiateCart,
+  markAsInitiated,
   removeAll,
   removeCartItem,
 } from "@/redux/cartReducer";
 import { CartItem } from "@/apis/@types/cart";
 
 export default function useCart() {
+  const cart = useSelector((state: RootState) => state.cart.cart);
+  const isInitiatedCart = useSelector(
+    (state: RootState) => state.cart.initiated
+  );
+
   const [isCartLoading, setisCartLoading] = useState(false);
-  const [hasBeenInitiallized, sethasBeenInitiallized] = useState(false);
 
   const dispatch = useDispatch();
   const { setItem, getItem } = useAsyncStorage("cart");
-
-  const cart = useSelector((state: RootState) => state.cart.cart);
 
   const addToCart = (cartItem: CartItem) => {
     dispatch(addCartItem(cartItem));
@@ -38,18 +41,23 @@ export default function useCart() {
 
   // Retrive from storage
   useEffect(() => {
+    if (isInitiatedCart) {
+      dispatch(markAsInitiated());
+      return;
+    }
+
     setisCartLoading(true);
     getItem().then((res) => {
       const savedCart = res ? JSON.parse(res) : [];
       dispatch(initiateCart(savedCart));
       setisCartLoading(false);
-      sethasBeenInitiallized(true);
+      dispatch(markAsInitiated());
     });
   }, []);
 
   // Saving to storage
   useEffect(() => {
-    if (!hasBeenInitiallized) return;
+    if (!isInitiatedCart) return;
 
     setItem(JSON.stringify(cart));
   }, [cart]);

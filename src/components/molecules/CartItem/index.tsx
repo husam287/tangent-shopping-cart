@@ -9,6 +9,7 @@ import QtyCounter from "../QtyCounter";
 import Button from "@/components/atoms/Button";
 import COLORS from "@/constants/Colors";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
+import toCurrency from "@/utils/toCurrency";
 
 export default function CartItem({
   product,
@@ -30,9 +31,16 @@ export default function CartItem({
           >
             {product.title}
           </Text>
+
           <Text fontSize={moderateScale(14)} fontFamily="font300" color="dark">
             {product.category}
           </Text>
+
+          <Text
+            fontSize={moderateScale(16)}
+            fontFamily="font700"
+            color="primary"
+          >{`${quantity} x ${toCurrency(product.price)}`}</Text>
 
           <QtyCounter
             initValue={quantity}

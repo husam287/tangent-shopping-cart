@@ -6,6 +6,8 @@ import Button from "@/components/atoms/Button";
 import toCurrency from "@/utils/toCurrency";
 import CartItem from "@/components/molecules/CartItem";
 import styles from "./styles";
+import useCart from "@/hooks/useCart";
+import showSuccessMsg from "@/utils/showSuccessMsg";
 
 export default function CartAddationBottomSheet({
   isVisible,
@@ -13,9 +15,13 @@ export default function CartAddationBottomSheet({
   product,
 }: CartAddationBottomSheetProps) {
   const [qty, setqty] = useState(1);
+  const { addToCart } = useCart();
 
   const onAddToCart = () => {
+    if (!product) return;
+    addToCart({ product, quantity: qty });
     setVisible(false);
+    showSuccessMsg({ msg: `${product.title} has been added to cart!` });
   };
 
   useEffect(() => {
