@@ -48,4 +48,5 @@ export const {
   useLazyGetProductsQuery,
   useGetSpecificProductQuery,
   useGetProductSuggestionListQuery,
+  useGetProductsQuery,
 } = ProductApi;
