@@ -15,7 +15,7 @@ import HomeScreen from "@/components/pages/Home";
 import CategoriesScreen from "@/components/pages/Categories";
 import ProductsScreen from "@/components/pages/Products";
 import CartScreen from "@/components/pages/Cart";
-import MainProfileScreen from "@/components/pages/MainProfile";
+import WishlistScreen from "@/components/pages/WishlistScreen";
 import { NavigationTabProps } from "@/components/molecules/Tab/types";
 import { TabParamList } from "./types";
 import MainScreenOptions from "./MainScreenOptions";
@@ -87,7 +87,7 @@ function CartTabBarElement({ focused }: Partial<NavigationTabProps>) {
   );
 }
 
-function ProfileTabBarElement({ focused }: Partial<NavigationTabProps>) {
+function WishlistTabBarElement({ focused }: Partial<NavigationTabProps>) {
   return (
     <NavigationTab
       title="WISHLIST"
@@ -148,12 +148,12 @@ export default function BottomTabNavigator() {
       />
 
       <Tabs.Screen
-        name="MainProfileScreen"
-        initialParams={{ title: "Profile" }}
+        name="WishlistScreen"
+        initialParams={{ title: "Wishlist" }}
         options={{
-          tabBarIcon: ProfileTabBarElement,
+          tabBarIcon: WishlistTabBarElement,
         }}
-        component={MainProfileScreen}
+        component={WishlistScreen}
       />
     </Tabs.Navigator>
   );

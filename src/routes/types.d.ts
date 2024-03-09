@@ -16,7 +16,7 @@ export type TabParamList = {
   CategoriesScreen: BaseParams;
   ProductsScreen: BaseParams;
   CartScreen: BaseParams;
-  MainProfileScreen: BaseParams;
+  WishlistScreen: BaseParams;
 };
 
 export type MainStackParamList = {

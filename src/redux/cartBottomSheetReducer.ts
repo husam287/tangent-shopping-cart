@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "@/apis/@types/product";
 
-interface IAuthState {
+interface ICartBottomSheetState {
   selectedProduct?: Product;
 }
-const initialState: IAuthState = {
+const initialState: ICartBottomSheetState = {
   selectedProduct: undefined,
 };
 

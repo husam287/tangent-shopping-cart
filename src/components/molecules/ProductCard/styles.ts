@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     flex: 1,
     overflow: "hidden",
+    position: "relative",
   },
   image: {
     height: verticalScale(140),
@@ -42,6 +43,13 @@ const styles = StyleSheet.create({
     ...GLOBAL_STYLES.rowJustifyBetween,
     alignItems: "flex-start",
     gap: horizontalScale(5),
+  },
+  wishlistIconContainer: {
+    left: 0,
+    padding: moderateScale(10),
+    position: "absolute",
+    top: 0,
+    zIndex: 2,
   },
 });
 

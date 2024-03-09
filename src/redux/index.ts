@@ -5,6 +5,7 @@ import appReducer from "./appReducer";
 import authReducer from "./authReducer";
 import cartReducer from "./cartReducer";
 import cartBottomSheetReducer from "./cartBottomSheetReducer";
+import wishlistReducer from "./wishlistReducer";
 
 const store = configureStore({
   reducer: {
@@ -13,6 +14,7 @@ const store = configureStore({
     app: appReducer,
     cart: cartReducer,
     cartBottomSheet: cartBottomSheetReducer,
+    wishlist: wishlistReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(api.middleware).concat(rtkQueryErrorLogger),
