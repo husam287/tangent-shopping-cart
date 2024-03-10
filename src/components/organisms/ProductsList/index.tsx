@@ -4,6 +4,7 @@ import ProductCard from "@/components/molecules/ProductCard";
 import { moderateScale } from "@/constants/Metrics";
 import List from "@/components/molecules/List";
 import { Product } from "@/apis/@types/product";
+import styles from "./styles";
 
 export default function ProductsList({
   products,
@@ -13,7 +14,10 @@ export default function ProductsList({
   isListView = false,
 }: ProductsListProps) {
   const productRenderItem: ListRenderItem<Product> = ({ item }) => (
-    <ProductCard product={item} />
+    <ProductCard
+      product={item}
+      containerStyle={!isListView ? styles.gridCard : undefined}
+    />
   );
 
   return (
