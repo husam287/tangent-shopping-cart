@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     ...GLOBAL_STYLES.font500,
   },
   spacing: {
-    marginStart: -horizontalScale(15),
-    padding: moderateScale(15),
+    marginEnd: -horizontalScale(15),
+    padding: horizontalScale(15),
   },
 });
 

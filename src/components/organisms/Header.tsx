@@ -5,8 +5,8 @@ import { useNavigation } from "@react-navigation/native";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import Colors from "@/constants/Colors";
 import Text from "@/components/atoms/Text";
-import NotificationBell from "@/components/molecules/NotificationBell";
 import { horizontalScale, moderateScale } from "@/constants/Metrics";
+import MainHeaderSearchIcon from "../molecules/MainHeaderSearchIcon";
 
 const styles = StyleSheet.create({
   headerStyle: {
@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
     ...GLOBAL_STYLES.font500,
   },
   hiddenStyle: { opacity: 0 },
+  rightComponentSpacing: {
+    marginEnd: -horizontalScale(15),
+  },
   spacing: {
     marginStart: -horizontalScale(15),
     padding: moderateScale(15),
@@ -76,9 +79,12 @@ export default function NavigationHeader({
       {/* RIGHT COMPONENT */}
       <View
         pointerEvents={isRightComponentHidden ? "none" : undefined}
-        style={isRightComponentHidden && styles.hiddenStyle}
+        style={[
+          isRightComponentHidden && styles.hiddenStyle,
+          styles.rightComponentSpacing,
+        ]}
       >
-        <NotificationBell />
+        <MainHeaderSearchIcon />
       </View>
     </View>
   );
