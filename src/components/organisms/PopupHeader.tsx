@@ -31,7 +31,11 @@ export default function PopupHeader({ title = "" }) {
   const navigation = useNavigation();
 
   const CloseButtonMarkup = (
-    <SimpleLineIcons name="close" size={18} color={Colors.dark} />
+    <SimpleLineIcons
+      name="close"
+      size={moderateScale(18)}
+      color={Colors.dark}
+    />
   );
 
   return (

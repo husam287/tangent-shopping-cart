@@ -4,6 +4,7 @@ import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { debounce } from "lodash-es";
 import Colors from "@/constants/Colors";
 import PureInput from "@/components/atoms/PureInput";
+import { moderateScale } from "@/constants/Metrics";
 
 const styles = StyleSheet.create({
   spaceEnd: {
@@ -12,11 +13,14 @@ const styles = StyleSheet.create({
 });
 
 export default function DebouncedSearchField({
+  defaultValue = "",
   onSearchChange = (_e: string | undefined) => {},
   withCloseButton = false,
   onSubmit = () => {},
 }) {
-  const [searchValue, setSearchValue] = useState<string | undefined>(undefined);
+  const [searchValue, setSearchValue] = useState<string | undefined>(
+    defaultValue
+  );
 
   const debouncedSearchHandler = useMemo(
     () => debounce(onSearchChange, 300),
@@ -47,10 +51,15 @@ export default function DebouncedSearchField({
       onChangeText={setSearchValue}
       onSubmitEditing={onSubmit}
       value={searchValue}
+      returnKeyType="search"
       suffix={
-        withCloseButton === false && searchValue ? (
+        withCloseButton && searchValue ? (
           <TouchableOpacity onPress={onDismiss}>
-            <AntDesign name="close" size={20} color={Colors.dark} />
+            <AntDesign
+              name="close"
+              size={moderateScale(20)}
+              color={Colors.dark}
+            />
           </TouchableOpacity>
         ) : null
       }

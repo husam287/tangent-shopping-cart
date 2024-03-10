@@ -14,13 +14,14 @@ type BaseParams<T = unknown> = (ScreenOptionsParams & T) | undefined;
 export type TabParamList = {
   HomeScreen: BaseParams;
   CategoriesScreen: BaseParams;
-  ProductsScreen: BaseParams;
+  ProductsScreen: BaseParams<{ search?: string }>;
   CartScreen: BaseParams;
   WishlistScreen: BaseParams;
 };
 
 export type MainStackParamList = {
   Root: NavigatorScreenParams<TabParamList>;
+  Search: BaseParams<{ search?: string }>;
   CategoryProducts: BaseParams<{ category: string }>;
   Payment: BaseParams;
   ProductDetails: BaseParams<{ productId?: string }>;

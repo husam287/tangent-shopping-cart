@@ -1,8 +1,9 @@
-import { FlatList } from "react-native";
+import { ListRenderItem } from "react-native";
 import { ProductsListProps } from "./types";
-import LoadingComponent from "@/components/atoms/LoadingComponent";
 import ProductCard from "@/components/molecules/ProductCard";
 import { moderateScale } from "@/constants/Metrics";
+import List from "@/components/molecules/List";
+import { Product } from "@/apis/@types/product";
 
 export default function ProductsList({
   products,
@@ -11,19 +12,22 @@ export default function ProductsList({
   loadMoreData,
   isListView = false,
 }: ProductsListProps) {
+  const productRenderItem: ListRenderItem<Product> = ({ item }) => (
+    <ProductCard product={item} />
+  );
+
   return (
-    <FlatList
+    <List
       keyExtractor={(item) => `${item.id}`}
       data={products}
       key={isListView ? "list" : "grid"}
       numColumns={isListView ? 1 : 2}
-      columnWrapperStyle={!isListView && { gap: moderateScale(10) }}
-      contentContainerStyle={{ gap: moderateScale(10) }}
-      showsVerticalScrollIndicator={false}
+      columnGap={moderateScale(10)}
+      rowGap={moderateScale(10)}
       ListHeaderComponent={() => HeaderComponent}
-      renderItem={({ item }) => <ProductCard product={item} />}
+      renderItem={productRenderItem}
       onEndReached={loadMoreData}
-      ListFooterComponent={isLoading ? <LoadingComponent /> : null}
+      isLoading={isLoading}
     />
   );
 }

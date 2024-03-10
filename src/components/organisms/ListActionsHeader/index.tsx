@@ -1,5 +1,5 @@
 import { TouchableOpacity, View } from "react-native";
-import { Entypo, Octicons } from "@expo/vector-icons";
+import { Entypo, MaterialIcons, Octicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { ListActionsHeaderProps } from "./types";
 import PureInput from "@/components/atoms/PureInput";
@@ -18,7 +18,11 @@ export default function ListActionsHeader({
   const navigation = useNavigation();
 
   const goToSearchScreen = () => {
-    navigation.navigate("CategoryProducts");
+    navigation.navigate("Search", { search: searchValue });
+  };
+
+  const clearSearch = () => {
+    navigation.setParams({ search: "" });
   };
 
   return (
@@ -42,6 +46,21 @@ export default function ListActionsHeader({
             }
           />
         </TouchableOpacity>
+      )}
+
+      {!!searchValue && (
+        <Button
+          backgroundColor={COLORS.transparent}
+          borderColor={COLORS.danger}
+          onPress={clearSearch}
+          prefix={
+            <MaterialIcons
+              name="search-off"
+              size={moderateScale(21)}
+              color={COLORS.danger}
+            />
+          }
+        />
       )}
 
       <Button

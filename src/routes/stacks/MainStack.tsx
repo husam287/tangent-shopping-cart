@@ -7,6 +7,7 @@ import BottomTabNavigator from "../BottomTabNavigator";
 import ProductDetails from "@/components/pages/ProductDetails";
 import Payment from "@/components/pages/Payment";
 import CategoryProducts from "@/components/pages/CategoryProducts";
+import Search from "@/components/pages/Search";
 // End of screen
 import { MainStackParamList } from "../types";
 import MainScreenOptions from "../MainScreenOptions";
@@ -58,6 +59,18 @@ export default function MainStack() {
         component={CategoryProducts}
         initialParams={{
           title: "CategoryProducts",
+        }}
+      />
+
+      <Stack.Screen
+        name="Search"
+        component={Search}
+        options={{
+          animation: "slide_from_bottom",
+        }}
+        initialParams={{
+          title: "Search",
+          isPopupHeader: true,
         }}
       />
     </Stack.Navigator>
