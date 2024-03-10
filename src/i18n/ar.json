@@ -32,5 +32,6 @@
   "WRONG_PHONE_FORMATE": "رقم هاتف غير صحيح",
   "PASSWORD_DONT_MATCH": "كلمة المرور غير متطابقة",
   "FREE": "مجاني",
-  "EMPTY_CART": "العربة فارغة"
+  "EMPTY_CART": "العربة فارغة",
+  "NO_PRODUCTS": "لا يوجد منتجات"
 }

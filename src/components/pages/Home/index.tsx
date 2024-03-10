@@ -5,6 +5,7 @@ import { useGetProductsQuery } from "@/apis/services/product";
 import Paper from "@/components/templates/Paper";
 import ScrollViewWithoutBar from "@/components/templates/ScrollViewWithoutBar";
 import AdvertiseSliderBanner from "@/components/organisms/AdvertiseSliderBanner";
+import useWishlistProducts from "@/hooks/useWishlistProducts";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -12,8 +13,14 @@ export default function HomeScreen() {
   const { data: featuredProducts, isFetching: isFeaturedProductsLoading } =
     useGetProductsQuery({});
 
+  const { wishlistProducts } = useWishlistProducts();
+
   const onGoToFeaturedProduct = () => {
     navigation.navigate("Root", { screen: "ProductsScreen" });
+  };
+
+  const onGoToWishlist = () => {
+    navigation.navigate("Root", { screen: "WishlistScreen" });
   };
 
   return (
@@ -35,8 +42,8 @@ export default function HomeScreen() {
         <Paper>
           <HomeProductSlider
             listTitle="Liked Products"
-            products={featuredProducts?.products || []}
-            listNavAction={onGoToFeaturedProduct}
+            products={wishlistProducts || []}
+            listNavAction={onGoToWishlist}
             isLoading={isFeaturedProductsLoading}
           />
         </Paper>

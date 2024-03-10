@@ -6,6 +6,7 @@ import List from "@/components/molecules/List";
 import { Product } from "@/apis/@types/product";
 import ProductCard from "@/components/molecules/ProductCard";
 import { horizontalScale } from "@/constants/Metrics";
+import LoadingComponent from "@/components/atoms/LoadingComponent";
 
 export default function HomeProductSlider({
   listTitle,
@@ -21,13 +22,15 @@ export default function HomeProductSlider({
     <View style={styles.container}>
       <ListHeader title={listTitle} onPressSeeMore={listNavAction} />
 
-      <View style={styles.listContainer}>
+      {!!isLoading && <LoadingComponent />}
+
+      <View style={isLoading && styles.listContainer}>
         <List
           mode="horizontal"
           data={products}
-          isLoading={isLoading}
           renderItem={renderProduct}
           columnGap={horizontalScale(10)}
+          emptyI18nKey="NO_PRODUCTS"
         />
       </View>
     </View>

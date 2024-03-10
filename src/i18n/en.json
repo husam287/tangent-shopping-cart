@@ -33,5 +33,6 @@
   "PASSWORD_DONT_MATCH": "Passwords don't match",
   "HOME_KEY_TEST": "hi",
   "FREE": "free",
-  "EMPTY_CART": "Empty Cart"
+  "EMPTY_CART": "Empty Cart",
+  "NO_PRODUCTS": "No products yet"
 }

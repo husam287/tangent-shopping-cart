@@ -32,6 +32,7 @@ export default function ProductsList({
       renderItem={productRenderItem}
       onEndReached={loadMoreData}
       isLoading={isLoading}
+      emptyI18nKey="NO_PRODUCTS"
     />
   );
 }
