@@ -48,7 +48,7 @@ export default function ListActionsHeader({
         </TouchableOpacity>
       )}
 
-      {!!searchValue && (
+      {!isSearchHidden && !!searchValue && (
         <Button
           backgroundColor={COLORS.transparent}
           borderColor={COLORS.danger}
