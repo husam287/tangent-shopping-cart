@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "tangent-shopping-cart",
+    "name": "Tangent Shop",
     "slug": "tangent-shopping-cart",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
-    "scheme": "husam287-expo-template-ts",
+    "scheme": "tangentshop",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#368cf2"
     },
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY"
@@ -20,16 +20,16 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.hossam.template",
+      "bundleIdentifier": "com.hossam.tangentshop",
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
       }
     },
     "android": {
-      "package": "com.hossam.template",
+      "package": "com.hossam.tangentshop",
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#368cf2"
       }
     },
     "locales": {
@@ -38,13 +38,7 @@
     },
     "plugins": [
       "expo-localization",
-      [
-        "expo-notifications",
-        {
-          "icon": "./src/assets/images/notification-icon.png",
-          "color": "#ffffff"
-        }
-      ],
+      "expo-notifications",
       "@mmomtchev/expo-android-localized-app-name"
     ],
     "experiments": {
