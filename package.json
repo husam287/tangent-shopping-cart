@@ -53,6 +53,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/config-plugins": "~7.2.2",
     "@expo/vector-icons": "^13.0.0",
     "@hookform/resolvers": "^3.1.1",
     "@mmomtchev/expo-android-localized-app-name": "^1.0.1",
@@ -62,8 +63,8 @@
     "@react-navigation/native-stack": "^6.9.13",
     "@reduxjs/toolkit": "^1.9.5",
     "eslint-plugin-react-native": "^4.0.0",
-    "expo": "~49.0.1",
-    "expo-apple-authentication": "^6.1.0",
+    "expo": "^49.0.23",
+    "expo-apple-authentication": "~6.1.0",
     "expo-auth-session": "~5.0.2",
     "expo-crypto": "~12.4.1",
     "expo-device": "~5.4.0",
@@ -85,10 +86,11 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
     "react-i18next": "^13.0.2",
-    "react-native": "0.72.3",
+    "react-native": "0.72.10",
     "react-native-actions-sheet": "^0.8.29",
     "react-native-animated-pagination-dots": "^0.1.73",
     "react-native-confirmation-code-field": "^7.3.1",
+    "react-native-gesture-handler": "~2.12.0",
     "react-native-modal": "^13.0.1",
     "react-native-modern-datepicker": "^1.0.0-beta.91",
     "react-native-reanimated": "~3.3.0",
@@ -96,13 +98,12 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-status-bar-height": "^2.6.0",
+    "react-native-svg": "13.9.0",
     "react-native-toast-message": "^2.1.6",
     "react-native-web": "~0.19.6",
     "react-redux": "^8.1.1",
     "search-params": "^4.0.1",
-    "yup": "^1.2.0",
-    "react-native-svg": "13.9.0",
-    "react-native-gesture-handler": "~2.12.0"
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

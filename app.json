@@ -13,7 +13,8 @@
       "backgroundColor": "#368cf2"
     },
     "updates": {
-      "checkAutomatically": "ON_ERROR_RECOVERY"
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "url": "https://u.expo.dev/ab08f9dc-b2e1-4037-9939-06cdcc23589d"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -43,6 +44,14 @@
     ],
     "experiments": {
       "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ab08f9dc-b2e1-4037-9939-06cdcc23589d"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
