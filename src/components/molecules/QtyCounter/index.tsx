@@ -44,6 +44,7 @@ export default function QtyCounter({
         }
         disabled={counter === minValue}
         onPress={onDecreaseCounter}
+        btnHeight={42}
       />
 
       <Text
@@ -60,6 +61,7 @@ export default function QtyCounter({
           <Entypo name="plus" size={moderateScale(14)} color={COLORS.light} />
         }
         onPress={onIncreaseCounter}
+        btnHeight={42}
       />
     </View>
   );

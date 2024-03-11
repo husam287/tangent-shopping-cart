@@ -10,6 +10,7 @@ import Button from "@/components/atoms/Button";
 import COLORS from "@/constants/Colors";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import toCurrency from "@/utils/toCurrency";
+import Paper from "@/components/templates/Paper";
 
 export default function CartItem({
   product,
@@ -42,12 +43,14 @@ export default function CartItem({
             color="primary"
           >{`${quantity} x ${toCurrency(product.price)}`}</Text>
 
-          <QtyCounter
-            initValue={quantity}
-            minValue={minValue}
-            onCounterChange={onQtyChange}
-            onReachedToMinValue={deleteItemFromCart}
-          />
+          <Paper bottomSpace={undefined} topSpace="md">
+            <QtyCounter
+              initValue={quantity}
+              minValue={minValue}
+              onCounterChange={onQtyChange}
+              onReachedToMinValue={deleteItemFromCart}
+            />
+          </Paper>
         </View>
       </View>
 
@@ -57,12 +60,13 @@ export default function CartItem({
             prefix={
               <MaterialIcons
                 name="delete-outline"
-                size={moderateScale(18)}
+                size={moderateScale(14)}
                 color={COLORS.light}
               />
             }
             backgroundColor={COLORS.danger}
             onPress={deleteItemFromCart}
+            btnHeight={42}
           />
         </View>
       )}
