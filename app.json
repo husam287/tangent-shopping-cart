@@ -10,7 +10,7 @@
     "splash": {
       "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#368cf2"
+      "backgroundColor": "#0d213d"
     },
     "updates": {
       "checkAutomatically": "ON_ERROR_RECOVERY",
@@ -30,7 +30,7 @@
       "package": "com.hossam.tangentshop",
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
-        "backgroundColor": "#368cf2"
+        "backgroundColor": "#0d213d"
       }
     },
     "locales": {
