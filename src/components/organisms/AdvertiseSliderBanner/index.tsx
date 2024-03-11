@@ -35,6 +35,7 @@ export default function AdvertiseSliderBanner() {
       data={HOME_ADVERTISMENTS}
       renderItem={advertiseRenderItem}
       autoPlay
+      isParallelX
       dotsContainer={styles.dotsContainer}
       height={verticalScale(250)}
     />

@@ -25,7 +25,12 @@ export default function HomeScreen() {
 
   return (
     <ScreenWrapper>
-      <ScrollViewWithoutBar>
+      <ScrollViewWithoutBar
+        alwaysBounceHorizontal={false}
+        alwaysBounceVertical={false}
+        bounces={false}
+        overScrollMode="never"
+      >
         <Paper>
           <AdvertiseSliderBanner />
         </Paper>

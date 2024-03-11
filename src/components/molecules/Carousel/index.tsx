@@ -5,8 +5,8 @@ import { ExpandingDot } from "react-native-animated-pagination-dots";
 import METRICS, { horizontalScale } from "@/constants/Metrics";
 import GLOBAL_STYLES from "@/constants/GlobalStyles";
 import COLORS from "@/constants/Colors";
-import { CarouselProps } from "./types";
 import LoadingComponent from "@/components/atoms/LoadingComponent";
+import { CarouselProps } from "./types";
 import styles from "./styles";
 
 const WIDTH = METRICS.screenWidth;
@@ -55,8 +55,11 @@ export default function Carousel<T>({
         renderItem={renderItem}
         mode={isParallelX ? "parallax" : undefined}
         modeConfig={{
-          parallaxScrollingScale: 0.8,
+          parallaxScrollingScale: 0.9,
           parallaxScrollingOffset: 110,
+        }}
+        panGestureHandlerProps={{
+          activeOffsetX: [-10, 10],
         }}
       />
 
