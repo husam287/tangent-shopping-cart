@@ -9,7 +9,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   - Displays featured products.
   - Displays wishlist products.
   - Display advertisements in an animated slider
-  - [<img src="./screenshots/home.png" height="500">](image.png)
+  - [<img src="./screenshots/home.png" height="500">](screenshots/home.png)
 
 - **Search:**
 
