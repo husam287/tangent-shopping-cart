@@ -40,7 +40,8 @@
     "plugins": [
       "expo-localization",
       "expo-notifications",
-      "@mmomtchev/expo-android-localized-app-name"
+      "@mmomtchev/expo-android-localized-app-name",
+      "expo-font"
     ],
     "experiments": {
       "tsconfigPaths": true
