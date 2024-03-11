@@ -16,14 +16,14 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   - Allows users to search for specific products based on keywords.
   - System is showing suggestion products within typing
   - Support search history saving
-  - [<img src="./screenshots/search.png" height="500">](image.png)
+  - [<img src="./screenshots/search.png" height="500">](screenshots/search.png)
 
 - **Cart:**
 
   - Enables users to add items to their cart for purchase.
   - Each cart item has delete button
   - Minus to zero removes the item automatically
-  - [<img src="./screenshots/cart.png" height="500">](image.png)
+  - [<img src="./screenshots/cart.png" height="500">](screenshots/cart.png)
 
 - **All Products:**
 
@@ -31,18 +31,18 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   - Can change the view [grid view, list view]
   - Can quick add more than 1 quantity with the help of a bottom sheet
   - Infinite scroll
-  - [<img src="./screenshots/product1.png" height="500">](image.png)
-  - [<img src="./screenshots/product2.png" height="500">](image.png)
+  - [<img src="./screenshots/product1.png" height="500">](screenshots/product1.png)
+  - [<img src="./screenshots/product2.png" height="500">](screenshots/product2.png)
 
 - **Categories:**
 
   - Organizes products into different categories for easy navigation.
-  - [<img src="./screenshots/category.png" height="500">](image.png)
+  - [<img src="./screenshots/category.png" height="500">](screenshots/category.png)
 
 - **Wishlist:**
 
   - Group your favorite products together.
-  - [<img src="./screenshots/wishlist.png" height="500">](image.png)
+  - [<img src="./screenshots/wishlist.png" height="500">](screenshots/wishlist.png)
 
 ## Technologies Used
 
@@ -53,7 +53,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
 - **React Native Reanimated 2:** A React Native library for building fluid and interactive animations.
 - **Expo Updates:** Facilitates over-the-air updates for the app, ensuring seamless updates without app store submissions.
 - **Atomic Design:** A methodology for creating design systems with reusable components.
-- **Plop:** A code generator that automates the creation of <b>components</b>, <b>Screens</b>, <b>Styles</b> and <b>Types</b> saving development time and maintaining consistency.
+- **Plop:** A code generator that automates the creation of <b>Components</b>, <b>Screens</b>, <b>Styles</b> and <b>Types</b> saving development time and maintaining consistency.
 
 ## Installation
 
