@@ -1,69 +1,73 @@
-# husam287-expo-template-ts
+# Tangent Shop - E-commerce App
 
-FILE BASE ROUTING EXPO SDK 49 Template (typescript)
+Tangent Shop is a React Native e-commerce app built with Expo, designed to provide users with a seamless shopping experience. This project implements various features integrates fake data from [[Dummy JSON](https://dummyjson.com/)].
 
-> Be sure to have [Node.js LTS release](https://nodejs.org/en) installed (v16+ required, v18+ recommended).
+## Features
 
-```bash
-npx create-expo-app [name] --template @husam287/expo-template-ts
-```
+- **Home:**
 
-## ⚡ Stack and Dependencies
+  - Displays featured products.
+  - Displays wishlist products.
+  - Display advertisements in an animated slider
+  - [<img src="./screenshots/home.png" height="500">](image.png)
 
-- [**React Navigation 6**](https://reactnavigation.org/): For navigating through screens, we are using react navigation's tab and stack navigators with custom header created
-- [**Redux Toolkit**](https://redux-toolkit.js.org/): We use redux toolkit to manage universal state. An introduction into redux toolkit can be found [here](https://www.youtube.com/watch?v=9zySeP5vH9c).
-- [**RTK Query**](https://redux-toolkit.js.org/rtk-query/overview): a high performance lib for fetching data
-- [**Icomoon**](https://icomoon.io/): To use custom icons using icon component and files generated from [Icomoon website](https://icomoon.io/)
-- [**Form Validation:**](https://react-hook-form.com/) We are using [react-hook-form](https://react-hook-form.com/) and [yup](https://www.npmjs.com/package/yup) to validate our user inputs, checking them in our form-input component while passing the yup schema in the screens
-- [**Translations:**](https://www.npmjs.com/package/i18n-js) We are using [react-i18next](https://react.i18next.com/) and [expo-localization](https://docs.expo.dev/versions/latest/sdk/localization/) to translate the app (en - ar) - i.e use (useAutoCompleteTranslation) hook to enjoy autocompleted i18n keys.
-- [**EAS and live update configuration:**](https://docs.expo.dev/build/introduction/) EAS and expo publish configurations are ready to use (production and testing channels).
-- [**Eslint with airbnb config:**](https://www.npmjs.com/package/eslint-config-airbnb) To keep your code more clean and improve its quality
-- [**Husky:**](https://github.com/typicode/husky) To make pre-commit hooks
-- [**Lint-staging:**](https://github.com/okonet/lint-staged#Configuration) Work with husky to prevent commit code without making linting
-- **Absolute Imports:** To avoid annoying relative.
-- **App Name Localization:** Now you can localize the app name with the key of "CFBundleDisplayName" for ios and "app_name" for android in i18n files
+- **Search:**
 
-## 🔧 Usage
+  - Allows users to search for specific products based on keywords.
+  - System is showing suggestion products within typing
+  - Support search history saving
+  - [<img src="./screenshots/search.png" height="500">](image.png)
 
-> Be sure to have [Node.js LTS release](https://nodejs.org/en) installed (v16+ required, v18+ recommended).
+- **Cart:**
 
->1) install the template
-```bash
-npx create-expo-app [name] --template @husam287/expo-template-ts
-```
+  - Enables users to add items to their cart for purchase.
+  - Each cart item has delete button
+  - Minus to zero removes the item automatically
+  - [<img src="./screenshots/cart.png" height="500">](image.png)
 
->2) install eas-cli globally
-```bash
-npm install -g eas-cli
-```
+- **All Products:**
 
->3) configure the expo project linkage
-```bash
-eas build:configure
-```
+  - Provides a comprehensive list of all available products.
+  - Can change the view [grid view, list view]
+  - Can quick add more than 1 quantity with the help of a bottom sheet
+  - Infinite scroll
+  - [<img src="./screenshots/product1.png" height="500">](image.png)
+  - [<img src="./screenshots/product2.png" height="500">](image.png)
 
->4) configure eas updates (required before build)
-```bash
-npm run deploy:test
-```
-### 💻 **Development Practices**
+- **Categories:**
 
-1. **Responsive:** Make sure to utilize responsive color and screen sizes for components in constants folder.
-2. **Lightweight Files:** Keep files under ~500 lines of code. If you much longer than this you should probably be creating a different component to import in.
-3. **Compilation and Formatting:** Strongly type when possible to cut down on runtime errors while also linting code often to maintain strong formatting.
-4. **Naming Conventions:**  
-   _Directories:_ all lower case with - for spaces (ex. home-components)  
-   _Files/Components:_ Capital first letter and CamelCase (ex. \<FormInput />)  
-   _Variables:_ camelCase (ex. const isLoading)
-   _Constant value:_ all upper case \_ for spaces (ex. GLOBAL_STYLES)
+  - Organizes products into different categories for easy navigation.
+  - [<img src="./screenshots/category.png" height="500">](image.png)
 
-## 📂 Organization
+- **Wishlist:**
 
-`src/app`: for expo router file routing system.  
-`src/components`: useful re-usable component library.  
-`src/constants`: app constants, such as theme, that remain consistent throughout the app.  
-`src/redux`: redux features, organized using the slice pattern.  
-`src/hooks`: useful hooks that can be re-used throughout the app.  
-`src/screens`: the main screens of the app (features).  
-`src/api`: apis using rtk query; organized as endpoints, axios configuration
-`src/assets`: all assets
+  - Group your favorite products together.
+  - [<img src="./screenshots/wishlist.png" height="500">](image.png)
+
+## Technologies Used
+
+- **React Native:** A JavaScript framework for building mobile applications.
+- **Expo SDK 50:** A set of tools and services for building and deploying React Native apps.
+- **RTK Query:** A powerful data fetching and caching library for React applications.
+- **Expo Images:** Enables the loading, displaying and cache of images within the app.
+- **React Native Reanimated 2:** A React Native library for building fluid and interactive animations.
+- **Expo Updates:** Facilitates over-the-air updates for the app, ensuring seamless updates without app store submissions.
+- **Atomic Design:** A methodology for creating design systems with reusable components.
+- **Plop:** A code generator that automates the creation of <b>components</b>, <b>Screens</b>, <b>Styles</b> and <b>Types</b> saving development time and maintaining consistency.
+
+## Installation
+
+To run Tangent Shop locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/husam287/tangent-shopping-cart.git`
+3. Install dependencies: `npm install` or `yarn install`
+4. Start the Expo development server: `npm start`
+
+## Acknowledgements
+
+- Thank you to the creators of Expo, React Native, and all other libraries and tools used in this project.
+- This project has initiated by [My Starter Template](https://www.npmjs.com/package/@husam287/expo-template-ts) which implements some extra features that is not used in this task like (notifications, Localization, deep-linking, forms with validation and etc.)
+
+## Contact
+
+For any inquiries or feedback, please contact [hossam.sherif.hassan@gmail.com](mailto:hossam.sherif.hassan@gmail.com).
