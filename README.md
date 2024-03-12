@@ -47,7 +47,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
     <li>Can quick add more than 1 quantity with the help of a bottom sheet</li>
     <li>Infinite scroll</li>
   </ul>
-  <div>
+  <div style="display:flex; flex-direction:column;">
     <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product1.png" height="500">
     <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product2.png" height="500">
   </div>
