@@ -9,21 +9,22 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   - Displays featured products.
   - Displays wishlist products.
   - Display advertisements in an animated slider
-  - [<img src="./screenshots/home.png" height="500">](screenshots/home.png)
+  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/home.png" height="500">](screenshots/home.png)
 
 - **Search:**
 
   - Allows users to search for specific products based on keywords.
   - System is showing suggestion products within typing
   - Support search history saving
-  - [<img src="./screenshots/search.png" height="500">](screenshots/search.png)
+  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/search.png" height="500">](screenshots/search.png)
 
 - **Cart:**
 
   - Enables users to add items to their cart for purchase.
   - Each cart item has delete button
   - Minus to zero removes the item automatically
-  - [<img src="./screenshots/cart.png" height="500">](screenshots/cart.png)
+  - Using Asyncstorage for saving cart
+  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/cart.png" height="500">](screenshots/cart.png)
 
 - **All Products:**
 
@@ -31,18 +32,19 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   - Can change the view [grid view, list view]
   - Can quick add more than 1 quantity with the help of a bottom sheet
   - Infinite scroll
-  - [<img src="./screenshots/product1.png" height="500">](screenshots/product1.png)
-  - [<img src="./screenshots/product2.png" height="500">](screenshots/product2.png)
+  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product1.png" height="500">](screenshots/product1.png)
+  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product2.png" height="500">](screenshots/product2.png)
 
 - **Categories:**
 
   - Organizes products into different categories for easy navigation.
-  - [<img src="./screenshots/category.png" height="500">](screenshots/category.png)
+  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/category.png" height="500">](screenshots/category.png)
 
 - **Wishlist:**
 
   - Group your favorite products together.
-  - [<img src="./screenshots/wishlist.png" height="500">](screenshots/wishlist.png)
+  - Using Asyncstorage for saving products
+  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/wishlist.png" height="500">](screenshots/wishlist.png)
 
 ## Technologies Used
 

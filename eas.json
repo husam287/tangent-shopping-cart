@@ -12,7 +12,10 @@
       "channel": "testingv1"
     },
     "production": {
-      "channel": "prodv1"
+      "channel": "prodv1",
+      "android": {
+        "buildType": "apk"
+      }
     }
   },
   "submit": {
