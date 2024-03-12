@@ -4,47 +4,75 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
 
 ## Features
 
-- **Home:**
+**Home:**
 
-  - Displays featured products.
-  - Displays wishlist products.
-  - Display advertisements in an animated slider
-  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/home.png" height="500">](screenshots/home.png)
+<div style="display:flex; gap:10px; justify-content:space-between">
+  <ul>
+    <li>Displays featured products.</li>
+    <li>Displays wishlist products.</li>
+    <li>Display advertisements in an animated slider</li>
+  </ul>
+  <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/home.png" height="500">
+</div>
+  
+**Search:**
+<div style="display:flex; gap:10px; justify-content:space-between">
+  <ul>
+    <li>Allows users to search for specific products based on keywords.</li>
+    <li>System is showing suggestion products within typing.</li>
+    <li>Support search history saving</li>
+  </ul>
+  <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/search.png" height="500">
+</div>
 
-- **Search:**
+**Cart:**
 
-  - Allows users to search for specific products based on keywords.
-  - System is showing suggestion products within typing
-  - Support search history saving
-  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/search.png" height="500">](screenshots/search.png)
+<div style="display:flex; gap:10px; justify-content:space-between">
+  <ul>
+    <li>Enables users to add items to their cart for purchase.</li>
+    <li>Each cart item has delete button</li>
+    <li>Minus to zero removes the item automatically</li>
+    <li>Using Asyncstorage for saving cart</li>
+  </ul>
+  <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/cart.png" height="500">
+</div>
 
-- **Cart:**
+**All Products:**
 
-  - Enables users to add items to their cart for purchase.
-  - Each cart item has delete button
-  - Minus to zero removes the item automatically
-  - Using Asyncstorage for saving cart
-  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/cart.png" height="500">](screenshots/cart.png)
+<div style="display:flex; gap:10px; justify-content:space-between">
+  <ul>
+    <li>Provides a comprehensive list of all available products.</li>
+    <li>Can change the view [grid view, list view]</li>
+    <li>Can quick add more than 1 quantity with the help of a bottom sheet</li>
+    <li>Infinite scroll</li>
+  </ul>
+  <div>
+    <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product1.png" height="500">
+    <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product2.png" height="500">
+  </div>
+</div>
+ 
+**Categories:**
 
-- **All Products:**
+<div style="display:flex; gap:10px; justify-content:space-between">
+  <ul>
+    <li>Organizes products into different categories for easy navigation.</li>
+    <li>Each cart item has delete button</li>
+    <li>Minus to zero removes the item automatically</li>
+    <li>Using Asyncstorage for saving cart</li>
+  </ul>
+  <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/category.png" height="500">
+</div>
+  
+**Wishlist:**
 
-  - Provides a comprehensive list of all available products.
-  - Can change the view [grid view, list view]
-  - Can quick add more than 1 quantity with the help of a bottom sheet
-  - Infinite scroll
-  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product1.png" height="500">](screenshots/product1.png)
-  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product2.png" height="500">](screenshots/product2.png)
-
-- **Categories:**
-
-  - Organizes products into different categories for easy navigation.
-  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/category.png" height="500">](screenshots/category.png)
-
-- **Wishlist:**
-
-  - Group your favorite products together.
-  - Using Asyncstorage for saving products
-  - [<img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/wishlist.png" height="500">](screenshots/wishlist.png)
+<div style="display:flex; gap:10px; justify-content:space-between">
+  <ul>
+    <li>Group your favorite products together.</li>
+    <li>Using Asyncstorage for saving products</li>
+  </ul>
+  <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/wishlist.png" height="500">
+</div>
 
 ## Technologies Used
 
@@ -62,13 +90,14 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
 To run Tangent Shop locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/husam287/tangent-shopping-cart.git`
-3. Install dependencies: `npm install` or `yarn install`
-4. Start the Expo development server: `npm start`
+2. Install dependencies: `npm install` or `yarn install`
+3. Start the Expo development server: `npm start`
 
 ## Deployment
 
 Download apps
--  Android [click here](https://expo.dev/artifacts/eas/5XPU683KRLQ9VvfM8uTJJV.apk)
+
+- Android [click here](https://expo.dev/artifacts/eas/5XPU683KRLQ9VvfM8uTJJV.apk)
 - IOS <i>not available (need apple developer account)</i>
 
 ## Acknowledgements
