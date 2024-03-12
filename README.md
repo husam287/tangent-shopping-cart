@@ -63,6 +63,12 @@ To run Tangent Shop locally, follow these steps:
 3. Install dependencies: `npm install` or `yarn install`
 4. Start the Expo development server: `npm start`
 
+## Deployment
+
+Download apps
+-  Android [click here](https://expo.dev/artifacts/eas/5XPU683KRLQ9VvfM8uTJJV.apk)
+- IOS <i>not available (need apple developer account)</i>
+
 ## Acknowledgements
 
 - Thank you to the creators of Expo, React Native, and all other libraries and tools used in this project.
