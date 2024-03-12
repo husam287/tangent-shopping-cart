@@ -14,7 +14,8 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   </ul>
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/home.png" height="500">
 </div>
-  
+<div class="page-break"></div>
+
 ### Search:
 
 <div style="display:flex; gap:10px; justify-content:space-between">
@@ -25,6 +26,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   </ul>
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/search.png" height="500">
 </div>
+<div class="page-break"></div>
 
 ### Cart:
 
@@ -37,6 +39,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   </ul>
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/cart.png" height="500">
 </div>
+<div class="page-break"></div>
 
 ### All Products:
 
@@ -48,10 +51,12 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
     <li>Infinite scroll</li>
   </ul>
   <div style="display:flex; flex-direction:column;">
-    <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product1.png" height="500">
-    <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product2.png" height="500">
+    <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product1.png" height="450">
+    <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/product2.png" height="450">
   </div>
 </div>
+<div class="page-break"></div>
+
  
 ### Categories:
 
@@ -64,6 +69,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   </ul>
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/category.png" height="500">
 </div>
+<div class="page-break"></div>
   
 ### Wishlist:
 
@@ -74,6 +80,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   </ul>
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/wishlist.png" height="500">
 </div>
+<div class="page-break"></div>
 
 ## Technologies Used
 
@@ -109,3 +116,16 @@ Download apps
 ## Contact
 
 For any inquiries or feedback, please contact [hossam.sherif.hassan@gmail.com](mailto:hossam.sherif.hassan@gmail.com).
+
+<style>
+.page-break {
+    display: none; 
+}
+@media print, (overflow-block: paged) or (overflow-block: optional-paged){
+  .page-break {
+    display: block;
+    page-break-after: always; /* CSS 2 */
+    break-after: page;   /* CSS 3+ */
+  }
+}
+</style>
