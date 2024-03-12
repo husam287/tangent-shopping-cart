@@ -4,7 +4,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
 
 ## Features
 
-**Home:**
+### Home:
 
 <div style="display:flex; gap:10px; justify-content:space-between">
   <ul>
@@ -15,7 +15,8 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/home.png" height="500">
 </div>
   
-**Search:**
+### Search:
+
 <div style="display:flex; gap:10px; justify-content:space-between">
   <ul>
     <li>Allows users to search for specific products based on keywords.</li>
@@ -25,7 +26,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/search.png" height="500">
 </div>
 
-**Cart:**
+### Cart:
 
 <div style="display:flex; gap:10px; justify-content:space-between">
   <ul>
@@ -37,7 +38,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/cart.png" height="500">
 </div>
 
-**All Products:**
+### All Products:
 
 <div style="display:flex; gap:10px; justify-content:space-between">
   <ul>
@@ -52,7 +53,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   </div>
 </div>
  
-**Categories:**
+### Categories:
 
 <div style="display:flex; gap:10px; justify-content:space-between">
   <ul>
@@ -64,7 +65,7 @@ Tangent Shop is a React Native e-commerce app built with Expo, designed to provi
   <img src="https://raw.githubusercontent.com/husam287/tangent-shopping-cart/main/screenshots/category.png" height="500">
 </div>
   
-**Wishlist:**
+### Wishlist:
 
 <div style="display:flex; gap:10px; justify-content:space-between">
   <ul>
