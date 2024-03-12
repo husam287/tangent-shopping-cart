@@ -1,4 +1,4 @@
-# Tangent Shop - E-commerce App
+# Tangent Shop - E-commerce Mobile App
 
 Tangent Shop is a React Native e-commerce app built with Expo, designed to provide users with a seamless shopping experience. This project implements various features integrates fake data from [[Dummy JSON](https://dummyjson.com/)].
 
